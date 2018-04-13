@@ -1,0 +1,55 @@
+{
+  "sections": [
+    {
+      "name": "Introduction",
+      "content": "docs/introduction.md"
+    },
+    {
+      "name": "Prerequisite",
+      "content": "docs/prerequisite.md"
+    },
+    {
+      "name": "Installation",
+      "content": "docs/installation.md"
+    },
+    {
+      "name": "Getting started",
+      "content": "docs/getting-started.md"
+    },
+    {
+      "name": "Configuration",
+      "content": "docs/configuration.md"
+    },
+    {
+      "name": "UI Components",
+      "content": "docs/ui.md",
+      "components": "src/components/**/*.js"
+    },
+    {
+      "name": "FAQ",
+      "content": "docs/faq.md"
+    },
+    {
+      "name": "Contribute",
+      "content": "docs/contribute.md",
+      "sections": [
+        {
+          "name": "Commands",
+          "content": "docs/commands.md"
+        },
+        {
+          "name": "Branches",
+          "content": "docs/branches.md"
+        },
+        {
+          "name": "Release",
+          "content": "docs/release.md"
+        }
+      ]
+    },
+    {
+      "name": "Local CLI",
+      "content": "docs/local-cli.md"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -ex
+git checkout ${PACKAGE_VERSION}-styled
+npm install
+# remove docs dependencies before re-adding them
+npm uninstall --save-dev bootstrap-styled react-transition-group
+# start
+npm run rollup-umd -- peer add "react-transition-group*ReactTransitionGroup"
+npm run rollup-umd -- peer add "git+ssh://git@module.kopaxgroup.com:20024/styled-components/bootstrap-styled.git#master*BootstrapStyled"
+cat > src/index.js << EOL
+/**
+ * Code your first module here
+ */
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Dropdown } from 'bootstrap-styled';
+
+// eslint-disable-next-line react/prefer-stateless-function
+export default class ReactDemo extends React.Component {
+  static propTypes = {
+    testProps: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    testProps: true,
+  }
+
+  render() {
+    const { testProps, ...rest } = this.props;
+    return (<Dropdown {...rest}>Hello {testProps}</Dropdown>);
+  }
+}
+
+EOL
+cat > src/tests/index.test.js << EOL
+/**
+ * Testing example
+ */
+
+import React from 'react';
+import { shallow } from 'enzyme';
+import ReactDemo from '../index';
+
+describe('<ReactDemo />', () => {
+  it('should render a <Dropdown /> tag', () => {
+    const renderedComponent = shallow(<ReactDemo />);
+    expect(renderedComponent.find('Dropdown').length).toBe(1);
+  });
+});
+
+EOL
+

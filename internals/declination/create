@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+set -ex
+
+path="$(dirname "$0")"
+
+# make env available for scripts
+rollup_git_url=$(cat $path/../../package.json | grep url | awk -F ': "' '{print $2}' | awk -F '"' '{print $1}' | grep git)
+export VERSION=$1
+
+# set perms
+chmod +x ${path}/*
+
+initial_process_wd=$PWD
+# loop in order declination scripts
+for f in ${path}/*; do
+  if [[ "${f}" != */create ]]; then
+    baseName=$(basename "$f")
+    declination=${baseName#*-}
+    target_name=rollup-${declination}
+    target_dir=${initial_process_wd}/${target_name}
+    export PREVIOUS_VERSION=${PREVIOUS_VERSION:=$VERSION}
+    # Foreach declination clone
+    git clone ${rollup_git_url} ${target_name} || echo "${target_name} already cloned";
+    cd ${target_dir}
+    ${f}
+    # build and test
+    npm install
+    npm run build
+    npm run styleguide:build
+    npm run test
+
+    # if passed in CI do tagging
+    if [[ -n "$CI" ]]; then
+      git checkout -b ${VERSION}-${declination}
+      git add -A
+      git commit -m "Create declination ${VERSION}-${declination} from rollup-umd ${VERSION}"
+      git push origin ${VERSION}-${declination} || echo "Already tagged"
+      git tag ${VERSION}-${declination} || echo "skipping..."
+      git push --tags || echo "skipping..."
+      export PREVIOUS_VERSION=${VERSION}-${declination}
+    fi
+
+    # and go pack to initial process working directory
+    cd ${initial_process_wd}
+  fi
+done

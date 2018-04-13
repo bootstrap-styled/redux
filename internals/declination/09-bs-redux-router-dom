@@ -1,0 +1,145 @@
+#!/usr/bin/env bash
+set -ex
+git checkout ${PACKAGE_VERSION}-bs-redux
+npm install
+# start
+npm run rollup-umd -- peer add react-router-dom --singleton
+npm run rollup-umd -- peer add react-router-redux@5.0.0-alpha.9 --singleton
+cat > src/components/index.js << EOL
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import Button from 'bootstrap-styled/lib/Button';
+import { createStructuredSelector } from 'reselect';
+import { makeSelectDemo } from './selectors';
+import { onToggleDemo as onToggleDemoAction } from './actions';
+
+export function LandingPage() {
+  return <div>Hello World</div>;
+}
+
+export function PortfolioPage() {
+  return <div>Portfolio</div>;
+}
+
+export function NotFoundPage() {
+  return <div>404 - Not found</div>;
+}
+
+/**
+ * Demo component contain a RW operation on the store and disable the status
+ */
+class Demo extends Component { // eslint-disable-line react/prefer-stateless-function
+  static propTypes = {
+    /** A boolean value to toggle for the demo of the redux store */
+    demo: PropTypes.bool.isRequired,
+    /** A dispatch function to be called for toggling the demo */
+    onToggleDemo: PropTypes.func.isRequired,
+  };
+
+  render() {
+    return (
+      <Router>
+        <div>
+          <Button onClick={this.props.onToggleDemo}>
+            Toggle status {this.props.demo.toString()}
+          </Button>
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route path="/portfolio" component={PortfolioPage} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+}
+
+const mapStateToProps = createStructuredSelector({
+  demo: makeSelectDemo(),
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onToggleDemo: () => dispatch(onToggleDemoAction()),
+});
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+export default compose(withConnect)(Demo);
+
+EOL
+cat > src/components/tests/index.test.js << EOL
+/**
+ * Testing example
+ */
+
+import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
+import { shallow, mount } from 'enzyme';
+import Demo, { LandingPage, NotFoundPage, PortfolioPage } from '../index';
+import Wrapper from '../../../styleguide/components/Wrapper';
+const rrd = require('react-router-dom');
+// Just render plain div with its children
+// We need to mock it because it?ll overlap with our MemoryRouter and causing the initialEntries not working.
+rrd.BrowserRouter = (props) => <div {...props} />;
+/* eslint-disable function-paren-newline */
+describe('<Demo />', () => {
+  it('should render a <Demo /> tag', () => {
+    const renderedComponent = shallow(<Wrapper><Demo /></Wrapper>);
+    expect(renderedComponent.length).toBe(1);
+  });
+  it('should toggle demo state', () => {
+    const renderedComponent = mount(
+      <Wrapper>
+        <MemoryRouter initialEntries={['/']}>
+          <Demo />
+        </MemoryRouter>
+      </Wrapper>
+    );
+    expect(renderedComponent.find('Demo').props().demo).toEqual(false);
+    renderedComponent.find('Button').simulate('click');
+    expect(renderedComponent.find('Demo').props().demo).toEqual(true);
+  });
+  it('invalid path should redirect to 404', () => {
+    const renderedComponent = mount(
+      <Wrapper>
+        <MemoryRouter initialEntries={['/random']}>
+          <Demo />
+        </MemoryRouter>
+      </Wrapper>
+    );
+    expect(renderedComponent.find(LandingPage)).toHaveLength(0);
+    expect(renderedComponent.find(NotFoundPage)).toHaveLength(1);
+  });
+  it('valid path should not redirect to landing', () => {
+    const renderedComponent = mount(
+      <Wrapper>
+        <MemoryRouter initialEntries={['/']}>
+          <Demo />
+        </MemoryRouter>
+      </Wrapper>
+    );
+    expect(renderedComponent.find(LandingPage)).toHaveLength(1);
+    expect(renderedComponent.find(NotFoundPage)).toHaveLength(0);
+  });
+  it('valid path should redirect to portfolio', () => {
+    const renderedComponent = mount(
+      <Wrapper>
+        <MemoryRouter initialEntries={['/portfolio']}>
+          <Demo />
+        </MemoryRouter>
+      </Wrapper>
+    );
+    expect(renderedComponent.find(PortfolioPage)).toHaveLength(1);
+    expect(renderedComponent.find(NotFoundPage)).toHaveLength(0);
+  });
+});
+
+EOL
+

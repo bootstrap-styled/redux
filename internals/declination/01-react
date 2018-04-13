@@ -1,0 +1,113 @@
+#!/usr/bin/env bash
+set -ex
+git checkout ${PREVIOUS_VERSION}
+npm install
+# remove docs dependencies before re-adding them
+npm uninstall react react-dom prop-types classnames --save-dev
+# start adding stuff
+npm run rollup-umd -- peer add "classnames*cn"
+npm run rollup-umd -- peer add react*React --singleton
+npm run rollup-umd -- peer add react-dom*ReactDom --singleton
+npm run rollup-umd -- peer add prop-types*PropTypes
+npm uninstall --save-dev eslint-config-airbnb-base
+npm install --save-dev react-test-renderer \
+    enzyme \
+    enzyme-adapter-react-16 \
+    raf \
+    babel-plugin-react-transform  \
+    babel-plugin-transform-react-constant-elements \
+    babel-plugin-transform-react-inline-elements \
+    babel-plugin-transform-react-remove-prop-types \
+    babel-preset-react \
+    eslint-config-airbnb \
+    eslint-plugin-jsx-a11y \
+    eslint-plugin-react
+cat > tmp.json << EOL
+{
+      "jsx-a11y/aria-props": 2,
+      "jsx-a11y/heading-has-content": 0,
+      "jsx-a11y/href-no-hash": "off",
+      "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+      "jsx-a11y/label-has-for": 2,
+      "jsx-a11y/mouse-events-have-key-events": 2,
+      "jsx-a11y/role-has-required-aria-props": 2,
+      "jsx-a11y/role-supports-aria-props": 2
+}
+EOL
+npm run rollup-umd -- lint add tmp.json
+rm tmp.json
+cat > tmp.json << EOL
+{
+      "react/forbid-prop-types": 0,
+      "react/jsx-first-prop-new-line": [
+        2,
+        "multiline"
+      ],
+      "react/jsx-filename-extension": 0,
+      "react/jsx-no-target-blank": 0,
+      "react/require-extension": 0,
+      "react/self-closing-comp": 0
+}
+EOL
+npm run rollup-umd -- lint add tmp.json
+rm tmp.json
+# replace airbnb plugin
+sed -i "s/\"extends\": \"airbnb-base\",/\"extends\": \"airbnb\",/g" package.json
+node -p "var pkg = require('./package.json'); let { jest, ...rest } = pkg; jest.setupFiles = ['raf/polyfill']; jest.setupTestFrameworkScriptFile = '<rootDir>/internals/testing/test-bundler.js'; fs.writeFileSync('./package.json', JSON.stringify({...rest, jest }, null, 2), 'utf8'); process.exit();"
+# prepare testing bundler settings
+mkdir -p internals/testing
+cat > internals/testing/test-bundler.js << EOL
+const Enzyme = require('enzyme');
+const Adapter = require('enzyme-adapter-react-16');
+Enzyme.configure({ adapter: new Adapter() });
+
+EOL
+# add sources
+cat > src/index.js << EOL
+/**
+ * Code your first module here
+ */
+import React from 'react';
+import PropTypes from 'prop-types';
+
+// eslint-disable-next-line react/prefer-stateless-function
+export default class ReactDemo extends React.Component {
+  static propTypes = {
+    testProps: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    testProps: true,
+  }
+
+  render() {
+    const { testProps, ...rest } = this.props;
+    return (
+      <div {...rest}>Hello {testProps}</div>
+    );
+  }
+}
+
+EOL
+# and tests
+cat > src/tests/index.test.js << EOL
+/**
+ * Testing example
+ */
+
+import { shallow } from 'enzyme';
+import React from 'react';
+import ReactDemo from '../index';
+
+const renderComponent = (props = {}) => shallow(<ReactDemo {...props} />);
+
+describe('<ReactDemo />', () => {
+  it('should render an <ReactDemo /> tag', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.length).toBe(1);
+  });
+});
+
+EOL
+npm run rollup-umd -- lint plugin react
+#npm run rollup-umd -- lint plugin jsx-ally
