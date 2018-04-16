@@ -4,13 +4,13 @@
 
 **Master**
 
-[![build status](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/badges/master/build.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/master)
-[![coverage report](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/badges/master/coverage.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/master)
+[![build status](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/badges/master/build.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/master)
+[![coverage report](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/badges/master/coverage.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/master)
 
 **Dev**
 
-[![build status](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/badges/dev/build.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/dev)
-[![coverage report](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/badges/dev/coverage.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/dev)
+[![build status](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/badges/dev/build.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/dev)
+[![coverage report](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/badges/dev/coverage.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/dev)
 
 
 ## Table of Contents
@@ -28,7 +28,7 @@
 ## Documentation
 
   - View [Markdown documentation](docs)
-  - View bootstrap-styled-redux [HTML documentation](https://module.kopaxgroup.com.yeutech.com/bootstrap-styled-redux) *(require access)*
+  - View bootstrap-styled-redux [HTML documentation](https://bootstrap-styled.kopaxgroup.com.yeutech.com/bootstrap-styled-redux) *(require access)*
   - View rollup-umd [HTML documentation](https://dev-tools.yeutech.com/rollup-umd) *(require access)*
 
 ## License

@@ -6,6 +6,7 @@ import { Button } from 'bootstrap-styled';
 import ConnectedBootstrapProvider from '../ConnectedBootstrapProvider';
 import reducer from '../reducer';
 
+/* eslint-disable function-paren-newline */
 describe('<ConnectedBootstrapProvider />', () => {
   let store;
   beforeAll(() => {
@@ -15,7 +16,7 @@ describe('<ConnectedBootstrapProvider />', () => {
   it('should render the ConnectedBootstrapProvider', () => {
     const renderedComponent = mount(
       <Provider store={store}>
-        <ConnectedBootstrapProvider>
+        <ConnectedBootstrapProvider injectGlobal={false}>
           <Button>Hey</Button>
         </ConnectedBootstrapProvider>
       </Provider>
@@ -23,3 +24,4 @@ describe('<ConnectedBootstrapProvider />', () => {
     expect(renderedComponent.contains(<Button>Hey</Button>)).toBe(true);
   });
 });
+/* eslint-enable function-paren-newline */

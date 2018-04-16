@@ -1,6 +1,6 @@
 import { makeTheme } from 'bootstrap-styled';
-import { changeTheme, deleteTheme, insertTheme, updateTheme } from '../actions';
-import { CHANGE_THEME, INSERT_THEME, UPDATE_THEME, DELETE_THEME } from '../constants';
+import { changeTheme, deleteTheme, insertTheme, updateTheme, changeThemeSuccess, changeThemeFailure } from '../actions';
+import { CHANGE_THEME, INSERT_THEME, UPDATE_THEME, DELETE_THEME, CHANGE_THEME_SUCCESS, CHANGE_THEME_FAILURE } from '../constants';
 
 
 describe('bootstrap-styled-redux actions', () => {
@@ -9,7 +9,7 @@ describe('bootstrap-styled-redux actions', () => {
     theme = makeTheme({
       '$brand-primary': 'red',
     });
-  })
+  });
 
   describe('changeTheme', () => {
     it('should dispatch changeTheme', () => {
@@ -42,6 +42,27 @@ describe('bootstrap-styled-redux actions', () => {
     it('should dispatch updateTheme', () => {
       expect(updateTheme(theme)).toEqual({
         type: UPDATE_THEME,
+        theme,
+      });
+    });
+  });
+
+
+  describe('changeThemeSuccess', () => {
+    it('should dispatch changeThemeSuccess', () => {
+      expect(changeThemeSuccess(theme)).toEqual({
+        type: CHANGE_THEME_SUCCESS,
+        theme,
+      });
+    });
+  });
+
+  describe('changeThemeFailure', () => {
+    it('should dispatch changeThemeFailure', () => {
+      const error = new Error('failure');
+      expect(changeThemeFailure(theme, error)).toEqual({
+        type: CHANGE_THEME_FAILURE,
+        error,
         theme,
       });
     });

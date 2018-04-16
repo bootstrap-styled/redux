@@ -5,8 +5,8 @@ const config = require('./styleguide/styleguide.config.json');
 
 module.exports = {
   styleguideDir: 'public',
-  components: 'src/**/*.js',
   ignore: [
+    '**/src/index.js',
     '**/theme/**',
     '**/reducer.js',
     '**/actions.js',

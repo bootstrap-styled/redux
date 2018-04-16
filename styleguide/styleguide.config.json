@@ -23,7 +23,7 @@
     {
       "name": "UI Components",
       "content": "docs/ui.md",
-      "components": "src/components/**/*.js"
+      "components": "src/**/*.js"
     },
     {
       "name": "FAQ",

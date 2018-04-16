@@ -28,9 +28,9 @@ describe('themeReducer', () => {
   it('should handle the insertTheme action correctly', () => {
     expectedResult = {
       'bs.redux': {
-        current: 'bootstrap',
+        current: 'bootstrap-styled',
         themes: {
-          bootstrap,
+          [bootstrap._name]: bootstrap, // eslint-disable-line no-underscore-dangle
           [theme._name]: theme, // eslint-disable-line no-underscore-dangle
         },
       },
@@ -38,9 +38,9 @@ describe('themeReducer', () => {
     expect(themeReducer(state, insertThemeAction(theme))).toEqual(expectedResult);
     expectedResult = {
       'bs.redux': {
-        current: 'bootstrap',
+        current: 'bootstrap-styled',
         themes: {
-          bootstrap,
+          [bootstrap._name]: bootstrap, // eslint-disable-line no-underscore-dangle
         },
       },
     };
@@ -50,9 +50,9 @@ describe('themeReducer', () => {
   it('should handle the updateTheme action correctly', () => {
     expectedResult = {
       'bs.redux': {
-        current: 'bootstrap',
+        current: 'bootstrap-styled',
         themes: {
-          bootstrap,
+          [bootstrap._name]: bootstrap, // eslint-disable-line no-underscore-dangle
           [theme._name]: theme, // eslint-disable-line no-underscore-dangle
         },
       },
@@ -61,9 +61,9 @@ describe('themeReducer', () => {
     const updateTheme = Object.assign({}, theme, { '$color-primary': 'blue' });
     expectedResult = {
       'bs.redux': {
-        current: 'bootstrap',
+        current: 'bootstrap-styled',
         themes: {
-          bootstrap,
+          [bootstrap._name]: bootstrap, // eslint-disable-line no-underscore-dangle
           [updateTheme._name]: updateTheme, // eslint-disable-line no-underscore-dangle
         },
       },
@@ -71,21 +71,21 @@ describe('themeReducer', () => {
     expect(themeReducer(state, updateThemeAction(updateTheme))).toEqual(expectedResult);
     expectedResult = {
       'bs.redux': {
-        current: 'bootstrap',
+        current: 'bootstrap-styled',
         themes: {
-          bootstrap,
+          [bootstrap._name]: bootstrap, // eslint-disable-line no-underscore-dangle
         },
       },
     };
     expect(themeReducer(state, deleteThemeAction(theme))).toEqual(expectedResult);
   });
 
-  it.only('should handle the deleteTheme action correctly', () => {
+  it('should handle the deleteTheme action correctly', () => {
     expectedResult = {
       'bs.redux': {
-        current: 'bootstrap',
+        current: 'bootstrap-styled',
         themes: {
-          bootstrap,
+          [bootstrap._name]: bootstrap, // eslint-disable-line no-underscore-dangle
           [theme._name]: theme, // eslint-disable-line no-underscore-dangle
         },
       },
@@ -93,35 +93,45 @@ describe('themeReducer', () => {
     expect(themeReducer(state, insertThemeAction(theme))).toEqual(expectedResult);
     expectedResult = {
       'bs.redux': {
-        current: 'bootstrap',
+        current: 'bootstrap-styled',
         themes: {
           [theme._name]: theme, // eslint-disable-line no-underscore-dangle
         },
       },
     };
     const deleteTheme = {
-      _name: 'bootstrap',
+      _name: 'bootstrap-styled',
     };
     expect(themeReducer(state, deleteThemeAction(deleteTheme))).toEqual(expectedResult);
     expectedResult = {
       'bs.redux': {
-        current: 'bootstrap',
+        current: 'bootstrap-styled',
         themes: {
           [theme._name]: theme, // eslint-disable-line no-underscore-dangle
-          bootstrap,
+          [bootstrap._name]: bootstrap, // eslint-disable-line no-underscore-dangle
         },
       },
     };
     expect(themeReducer(state, insertThemeAction(bootstrap))).toEqual(expectedResult);
     expectedResult = {
       'bs.redux': {
-        current: 'bootstrap',
+        current: 'bootstrap-styled',
         themes: {
-          bootstrap,
+          [bootstrap._name]: bootstrap, // eslint-disable-line no-underscore-dangle
         },
       },
     };
     expect(themeReducer(state, deleteThemeAction(theme))).toEqual(expectedResult);
+    expectedResult = {
+      'bs.redux': {
+        current: 'bootstrap-styled',
+        themes: {
+          [theme._name]: theme, // eslint-disable-line no-underscore-dangle
+          [bootstrap._name]: bootstrap, // eslint-disable-line no-underscore-dangle
+        },
+      },
+    };
+    expect(themeReducer(state, insertThemeAction(theme))).toEqual(expectedResult);
   });
 
   it('should handle the changeTheme action correctly', () => {
@@ -129,7 +139,7 @@ describe('themeReducer', () => {
       'bs.redux': {
         current: 'test_theme',
         themes: {
-          bootstrap,
+          [bootstrap._name]: bootstrap, // eslint-disable-line no-underscore-dangle
           [theme._name]: theme, // eslint-disable-line no-underscore-dangle
         },
       },
