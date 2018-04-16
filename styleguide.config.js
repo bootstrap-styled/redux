@@ -5,6 +5,17 @@ const config = require('./styleguide/styleguide.config.json');
 
 module.exports = {
   styleguideDir: 'public',
+  components: 'src/**/*.js',
+  ignore: [
+    '**/theme/**',
+    '**/reducer.js',
+    '**/actions.js',
+    '**/constants.js',
+    '**/__tests__/**',
+    '**/*.test.{js,jsx,ts,tsx}',
+    '**/*.spec.{js,jsx,ts,tsx}',
+    '**/*.d.ts',
+  ],
   previewDelay: 500,
   skipComponentsWithoutExample: false,
   showCode: false,

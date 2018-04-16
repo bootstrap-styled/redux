@@ -1,6 +1,6 @@
 # bootstrap-styled-redux
 
-bootstrap-styled-redux npm package.
+`ConnectBootstrapProvider` ReactJS component made for bootstrap-styled and redux.
 
 **Master**
 
@@ -33,4 +33,6 @@ bootstrap-styled-redux npm package.
 
 ## License
 
-Copyright (c) 2018 Yeutech Company Limited. For more information `contact@yeutech.com`. Made with [rollup-umd](https://module.kopaxgroup.com/dev-tools/rollup-umd/tags/0.8.2) 0.8.2
+Licensed under the MIT License, Copyright © 2017-present Yeutech Company Limited.
+
+See [LICENSE](LICENSE.md) for more information.

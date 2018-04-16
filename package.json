@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-styled-redux",
   "version": "0.0.1",
-  "description": "bootstrap-styled-redux",
+  "description": "ConnectBootstrapProvider ReactJS component made for bootstrap-styled and redux",
   "main": "lib/index.js",
   "jsnext:main": "dist/bootstrap-styled-redux.es.js",
   "module": "dist/bootstrap-styled-redux.es.js",
@@ -30,6 +30,7 @@
     "lint": "eslint src",
     "prepublish": "npm run build",
     "lint-staged": "lint-staged",
+    "ci-publish": "ci-publish",
     "rollup-umd": "bin/rollup-umd.js",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
@@ -42,7 +43,6 @@
     "url": "https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/issues"
   },
   "files": [
-    "CODE_OF_CONDUCT.md",
     "LICENSE.md",
     "dist",
     "internals",
@@ -50,10 +50,16 @@
     "bin"
   ],
   "keywords": [
-    ""
+    "bootstrap",
+    "bootstrap-styled",
+    "styled",
+    "styled-components",
+    "react"
   ],
-  "author": "Yeutech Company Limited <contact@yeutech.com>",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "authors": [
+    "Dimitri Kopriwa <dimitri.kopriwa@yeutech.com>"
+  ],
+  "license": "MIT",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb",
@@ -169,10 +175,10 @@
     "lint-staged": "^4.1.3",
     "pre-commit": "^1.2.2",
     "raf": "^3.4.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.2.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "react-styleguidist": "^6.5.0",
-    "react-test-renderer": "^16.3.1",
+    "react-test-renderer": "^16.3.2",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-cleanup": "^2.0.0",
@@ -217,12 +223,12 @@
     "classnames": "2.2.5",
     "prop-types": "15.6.1",
     "react-transition-group": "2.3.0",
-    "bootstrap-styled": "git+ssh://git@module.kopaxgroup.com:20024/styled-components/bootstrap-styled.git#1.5.11",
+    "bootstrap-styled": "1.6.0",
     "reselect": "3.0.1"
   },
   "peerDependencies": {
-    "react": "^16.3.1",
-    "react-dom": "^16.2.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "styled-components": "^3.2.5",
     "redux": "^3.7.2",
     "react-redux": "^5.0.7"

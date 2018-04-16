@@ -57,7 +57,7 @@ stages:
   - build
   - test
   - release
-#  - publish
+  - publish
   - deploy
 
 # Job: Build
@@ -177,7 +177,20 @@ release:
   tags:
     - docker
 
-## Job: !PUBLISH
+# Job: Publish
+publish:
+  stage: publish
+  script:
+    - git fetch --all
+    - git checkout ${PACKAGE_VERSION}
+    - git reset HEAD --hard
+    - npm run ci-publish || echo true
+  dependencies:
+    - build
+  only:
+    - master
+  tags:
+    - docker
 
 # Pages
 pages:
