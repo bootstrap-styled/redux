@@ -13,17 +13,13 @@
       "content": "docs/installation.md"
     },
     {
-      "name": "Getting started",
-      "content": "docs/getting-started.md"
-    },
-    {
       "name": "Configuration",
       "content": "docs/configuration.md"
     },
     {
       "name": "UI Components",
       "content": "docs/ui.md",
-      "components": "src/**/*.js"
+      "components": "src/components/**/*.js"
     },
     {
       "name": "FAQ",

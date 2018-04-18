@@ -7,6 +7,7 @@ module.exports = {
   styleguideDir: 'public',
   ignore: [
     '**/src/index.js',
+    '**/src/reducer/**',
     '**/theme/**',
     '**/reducer.js',
     '**/actions.js',
@@ -35,6 +36,11 @@ module.exports = {
         ],
       }),
     ],
+    resolve: {
+      alias: {
+        'bootstrap-styled-redux': path.resolve(__dirname),
+      },
+    },
     module: {
       rules: [
         // Babel loader, will use your project’s .babelrc
