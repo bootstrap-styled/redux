@@ -10,6 +10,7 @@ module.exports = {
     '**/src/reducer/**',
     '**/theme/**',
     '**/reducer.js',
+    '**/selectors.js',
     '**/actions.js',
     '**/constants.js',
     '**/__tests__/**',

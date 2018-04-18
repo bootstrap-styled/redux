@@ -2,8 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Toggle from 'bootstrap-styled-toggle/lib/components/Toggle';
+import { createStructuredSelector } from 'reselect';
 import { changeTheme as changeThemeAction } from '../../actions';
+import { selectValue, selectValues } from '../../selectors';
 
+/**
+ * ThemeToggle is used to display a select option to change theme
+ * @param value
+ * @param values
+ * @param onThemeToggle
+ * @param className
+ * @constructor
+ */
 export const ThemeToggle = ({
   value,
   values,
@@ -24,9 +34,9 @@ ThemeToggle.propTypes = {
   className: PropTypes.string,
 };
 
-const mapStateToProps = (state) => ({
-  value: state['bs.redux'].theme._name, // eslint-disable-line no-underscore-dangle
-  values: Object.keys(state['bs.redux'].themes).map((key) => state['bs.redux'].themes[key]._name), // eslint-disable-line no-underscore-dangle
+const mapStateToProps = createStructuredSelector({
+  value: selectValue,
+  values: selectValues,
 });
 
 export const mapDispatchToProps = (dispatch) => ({
