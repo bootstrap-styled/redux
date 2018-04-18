@@ -61,32 +61,6 @@ stages:
   - deploy
 
 # Job: Build
-build_dev:
-  stage: build
-  script:
-    - npm install
-    - npm run build
-    - du -h dist/*.min.js
-    # release dist and lib
-    - git add dist/ lib/
-    - git commit -m "new release dist and lib" || echo "no change detected"
-    - git push origin HEAD:${CI_COMMIT_REF_NAME}
-  cache:
-    key: ${CI_BUILD_REF_NAME}
-    paths:
-      - node_modules/
-  artifacts:
-    when: on_success
-    name: "${CI_PROJECT_PATH}-${CI_PIPELINE_ID}-${CI_COMMIT_REF_NAME}"
-    untracked: true
-    expire_in: 3 mins
-    paths:
-      - .
-  only:
-    - dev
-  tags:
-    - docker
-
 build:
   stage: build
   script:
@@ -105,6 +79,7 @@ build:
     paths:
       - .
   only:
+    - dev
     - master
   tags:
     - docker
