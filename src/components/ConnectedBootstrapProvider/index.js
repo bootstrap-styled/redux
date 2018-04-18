@@ -6,7 +6,6 @@ import BootstrapProvider from 'bootstrap-styled/lib/BootstrapProvider';
 const ConnectedBootstrapProvider = (props) => <BootstrapProvider {...props} />;
 
 const mapStateToProps = (state) => ({
-  name: console.log(state),
   theme: state['bs.redux'].theme,
 });
 
