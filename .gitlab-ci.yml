@@ -85,19 +85,6 @@ build:
     - docker
 
 # Job: Test
-test_dev:
-  stage: test
-  coverage: '/All files[^|]*\|\s*[\d.]*\s*\|\s*[\d.]*\s*\|\s*[\d.]*\s*\|\s*([\d.]*)\s*\|\s*/'
-  script:
-    - npm run test
-    - sonar-scanner -Dsonar.host.url=${SONAR_URL} -Dsonar.login=${SONAR_LOGIN} -Dsonar.branch=${CI_COMMIT_REF_NAME} -Dsonar.projectVersion=${SONAR_VERSION}
-  dependencies:
-    - build_dev
-  only:
-    - dev
-  tags:
-    - docker
-
 test:
   stage: test
   coverage: '/All files[^|]*\|\s*[\d.]*\s*\|\s*[\d.]*\s*\|\s*[\d.]*\s*\|\s*([\d.]*)\s*\|\s*/'
@@ -107,6 +94,7 @@ test:
   dependencies:
     - build
   only:
+    - dev
     - master
   tags:
     - docker
