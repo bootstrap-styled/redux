@@ -1,13 +1,14 @@
 import React from 'react';
 import { compose } from 'redux';
+import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import BootstrapProvider from 'bootstrap-styled/lib/BootstrapProvider';
-
+import { selectTheme } from '../../selectors';
 const ConnectedBootstrapProvider = (props) => <BootstrapProvider {...props} />;
 
-const mapStateToProps = (state) => ({
-  name: console.log(state),
-  theme: state['bs.redux'].theme,
+/** We map the theme from redux */
+const mapStateToProps = createStructuredSelector({
+  theme: selectTheme,
 });
 
 const withConnect = connect(mapStateToProps);

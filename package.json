@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-styled-redux",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ConnectBootstrapProvider ReactJS component made for bootstrap-styled and redux",
   "main": "lib/index.js",
   "jsnext:main": "dist/bootstrap-styled-redux.es.js",
@@ -181,7 +181,7 @@
     "react-redux": "^5.0.7",
     "react-styleguidist": "^6.5.0",
     "react-test-renderer": "^16.3.2",
-    "redux": "^4.0.0",
+    "redux": "^3.6.0",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-cleanup": "^2.0.0",
@@ -224,7 +224,7 @@
     "classnames": "2.2.5",
     "prop-types": "15.6.1",
     "react-transition-group": "2.3.0",
-    "bootstrap-styled": "1.6.0",
+    "bootstrap-styled": "^1.6.1",
     "reselect": "3.0.1"
   },
   "peerDependencies": {
