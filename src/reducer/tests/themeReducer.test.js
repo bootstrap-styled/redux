@@ -58,7 +58,9 @@ describe('themeReducer', () => {
   it('should handle the storeTheme action correctly', () => {
     expectedResult = {
       theme: bootstrapStyled,
-      themes,
+      themes: {
+        [theme._name]: theme, // eslint-disable-line no-underscore-dangle
+      },
     };
     expect(themeReducer(state, storeThemeAction(theme))).toEqual(expectedResult);
   });

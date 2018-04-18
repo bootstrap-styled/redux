@@ -6,24 +6,29 @@ export const initialState = {
   themes: { 'bootstrap-styled': bootstrapStyled },
 };
 
+/* eslint-disable no-underscore-dangle */
+/**
+ * themeReducer
+ * @param state
+ * @param action
+ * @returns {*}
+ */
 export default (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_THEME: {
       // allow change by theme name
-      if (typeof action.theme === 'string') { // eslint-disable-line no-underscore-dangle
-        return { ...state, theme: state.themes[action.theme] };
+      if (typeof action.theme === 'string') {
+        return { themes: state.themes, theme: state.themes[action.theme] };
       }
       // allow change by insert/override themes directly
-      return { ...state, themes: { ...state.themes, [action.theme._name]: action.theme }, theme: action.theme }; // eslint-disable-line no-underscore-dangle
+      return { themes: { ...state.themes, [action.theme._name]: action.theme }, theme: action.theme };
     }
     case STORE_THEME: {
-      const newState = { ...state };
-      newState.themes[action.theme._name] = action.theme; // eslint-disable-line no-underscore-dangle
-      return newState;
+      return { themes: { ...state.themes, [action.theme._name]: action.theme }, theme: state.theme };
     }
     case DELETE_THEME: {
       const newState = { ...state };
-      delete newState.themes[action.theme._name]; // eslint-disable-line no-underscore-dangle
+      delete newState.themes[action.theme._name];
       return newState;
     }
     default:
