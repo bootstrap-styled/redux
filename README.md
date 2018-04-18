@@ -1,16 +1,16 @@
 # bootstrap-styled-redux
 
-bootstrap-styled-redux npm package.
+`ConnectBootstrapProvider` ReactJS component made for bootstrap-styled and redux.
 
 **Master**
 
-[![build status](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/badges/master/build.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/master)
-[![coverage report](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/badges/master/coverage.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/master)
+[![build status](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/badges/master/build.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/master)
+[![coverage report](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/badges/master/coverage.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/master)
 
 **Dev**
 
-[![build status](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/badges/dev/build.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/dev)
-[![coverage report](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/badges/dev/coverage.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/dev)
+[![build status](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/badges/dev/build.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/dev)
+[![coverage report](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/badges/dev/coverage.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/commits/dev)
 
 
 ## Table of Contents
@@ -28,9 +28,11 @@ bootstrap-styled-redux npm package.
 ## Documentation
 
   - View [Markdown documentation](docs)
-  - View bootstrap-styled-redux [HTML documentation](https://module.kopaxgroup.com.yeutech.com/bootstrap-styled-redux) *(require access)*
+  - View bootstrap-styled-redux [HTML documentation](https://bootstrap-styled.kopaxgroup.com.yeutech.com/bootstrap-styled-redux) *(require access)*
   - View rollup-umd [HTML documentation](https://dev-tools.yeutech.com/rollup-umd) *(require access)*
 
 ## License
 
-Copyright (c) 2018 Yeutech Company Limited. For more information `contact@yeutech.com`. Made with [rollup-umd](https://module.kopaxgroup.com/dev-tools/rollup-umd/tags/0.8.2) 0.8.2
+Licensed under the MIT License, Copyright © 2017-present Yeutech Company Limited.
+
+See [LICENSE](LICENSE.md) for more information.
