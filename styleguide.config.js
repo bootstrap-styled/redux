@@ -5,6 +5,18 @@ const config = require('./styleguide/styleguide.config.json');
 
 module.exports = {
   styleguideDir: 'public',
+  ignore: [
+    '**/src/index.js',
+    '**/src/reducer/**',
+    '**/theme/**',
+    '**/reducer.js',
+    '**/actions.js',
+    '**/constants.js',
+    '**/__tests__/**',
+    '**/*.test.{js,jsx,ts,tsx}',
+    '**/*.spec.{js,jsx,ts,tsx}',
+    '**/*.d.ts',
+  ],
   previewDelay: 500,
   skipComponentsWithoutExample: false,
   showCode: false,
@@ -24,6 +36,11 @@ module.exports = {
         ],
       }),
     ],
+    resolve: {
+      alias: {
+        'bootstrap-styled-redux': path.resolve(__dirname),
+      },
+    },
     module: {
       rules: [
         // Babel loader, will use your project’s .babelrc

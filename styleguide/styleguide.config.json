@@ -13,10 +13,6 @@
       "content": "docs/installation.md"
     },
     {
-      "name": "Getting started",
-      "content": "docs/getting-started.md"
-    },
-    {
       "name": "Configuration",
       "content": "docs/configuration.md"
     },

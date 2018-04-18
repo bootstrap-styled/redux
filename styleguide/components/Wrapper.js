@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import theme, { makeTheme } from 'bootstrap-styled/lib/theme';
 import Provider from 'react-redux/lib/components/Provider';
 import PropTypes from 'prop-types';
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import reducer from '../../src/components/reducer';
+import { createStore, applyMiddleware, compose } from 'redux';
+import reducer from '../../src/reducer';
 
 export default class Wrapper extends Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
@@ -27,7 +28,22 @@ export default class Wrapper extends Component { // eslint-disable-line react/pr
       // other store enhancers if any
     );
 
-    const store = createStore(combineReducers({ 'bs.demo': reducer }), enhancer);
+    const demoTheme = makeTheme({
+      _name: 'demo', // eslint-disable-line no-underscore-dangle
+      '$btn-primary-bg': 'yellow',
+      '$btn-success-bg': 'pink',
+      '$btn-warning-bg': 'darkgrey',
+    });
+
+    const store = createStore(reducer, {
+      'bs.redux': {
+        theme,
+        themes: {
+          [theme._name]: theme, // eslint-disable-line no-underscore-dangle
+          [demoTheme._name]: demoTheme, // eslint-disable-line no-underscore-dangle
+        },
+      },
+    }, enhancer);
     this.setState({
       store,
     });
