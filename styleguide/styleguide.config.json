@@ -13,10 +13,6 @@
       "content": "docs/installation.md"
     },
     {
-      "name": "Configuration",
-      "content": "docs/configuration.md"
-    },
-    {
       "name": "UI Components",
       "content": "docs/ui.md",
       "components": "src/components/**/*.js"
