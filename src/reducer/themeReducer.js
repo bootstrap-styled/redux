@@ -1,5 +1,5 @@
 import bootstrapStyled from 'bootstrap-styled/lib/theme';
-import { CHANGE_THEME, DELETE_THEME, STORE_THEME } from '../constants';
+import { CHANGE_THEME, DELETE_THEME, DELETE_THEMES, STORE_THEME } from '../constants';
 
 export const initialState = {
   theme: bootstrapStyled,
@@ -30,6 +30,9 @@ export default (state = initialState, action) => {
       const newState = { ...state };
       delete newState.themes[action.theme._name];
       return newState;
+    }
+    case DELETE_THEMES: {
+      return { ...state, themes: {} };
     }
     default:
       return state;
