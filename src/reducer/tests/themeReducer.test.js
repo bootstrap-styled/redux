@@ -3,6 +3,7 @@ import themeReducer, { initialState } from '../themeReducer';
 import {
   changeTheme as changeThemeAction,
   deleteTheme as deleteThemeAction,
+  deleteThemes as deleteThemesAction,
   storeTheme as storeThemeAction,
 } from '../../actions';
 
@@ -63,5 +64,13 @@ describe('themeReducer', () => {
       },
     };
     expect(themeReducer(state, storeThemeAction(theme))).toEqual(expectedResult);
+  });
+
+  it('should handle deleteThemes action correctly', () => {
+    expectedResult = {
+      theme: bootstrapStyled,
+      themes: {},
+    };
+    expect(themeReducer(state, deleteThemesAction())).toEqual(expectedResult);
   });
 });
