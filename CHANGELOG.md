@@ -4,7 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [?NEXT?] - ????-??-??
 
-- Simplify toggler.
+- Prevent deleting main theme when using false name on `changeTheme`.
+
+## [v0.0.8] - 2018-04-19
+
+- Simplify Toggler.
 
 ## [v0.0.7] - 2018-04-19
 

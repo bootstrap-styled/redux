@@ -18,7 +18,7 @@ export default (state = initialState, action) => {
     case CHANGE_THEME: {
       // allow change by theme name
       if (typeof action.theme === 'string') {
-        return { themes: state.themes, theme: state.themes[action.theme] };
+        return { themes: state.themes, theme: state.themes[action.theme] || state.theme }; // this will prevent false name
       }
       // allow change by insert/override themes directly
       return { themes: { ...state.themes, [action.theme._name]: action.theme }, theme: action.theme };

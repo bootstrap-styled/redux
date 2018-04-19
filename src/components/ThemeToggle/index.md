@@ -1,3 +1,7 @@
+The `<ThemeToggle />` is an example you can use.
+
+It demonstrate how to change the theme by reading the `themes` stored.
+ 
 ```js
 const { default: Button } = require('bootstrap-styled/lib/Button');
 <ConnectedBootstrapProvider injectGlobal={false}>
