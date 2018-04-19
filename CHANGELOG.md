@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [?NEXT?] - ????-??-??
 
-- TODO: write changelog before preparing next tag
+- Create shrinkwrap to prevent optional installation.
+- Added react-intl to `declination.json`.
 
 ## [v0.0.4] - 2018-04-18
 
