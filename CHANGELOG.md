@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [?NEXT?] - ????-??-??
+## [v0.0.5] - 2018-04-19
 
 - Create shrinkwrap to prevent optional installation.
 - Added react-intl to `declination.json`.
