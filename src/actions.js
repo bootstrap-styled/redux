@@ -1,4 +1,4 @@
-import { CHANGE_THEME, STORE_THEME, DELETE_THEME } from './constants';
+import { CHANGE_THEME, STORE_THEME, DELETE_THEME, DELETE_THEMES } from './constants';
 
 /**
  * Used to change the theme
@@ -29,4 +29,12 @@ export const storeTheme = (theme) => ({
 export const deleteTheme = (theme) => ({
   type: DELETE_THEME,
   theme,
+});
+
+/**
+ * Remove all stored themes
+ * theme are identified with a key '_name'
+ */
+export const deleteThemes = () => ({
+  type: DELETE_THEMES,
 });

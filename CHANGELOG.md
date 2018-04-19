@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [?NEXT?] - ????-??-??
 
+- Name default reducer.
+- Added action `deleteThemes`.
+
+## [v0.0.6] - 2018-04-19
+
 - Unfixing dependency [async](https://www.npmjs.com/package/async) ^2.6.0.
 - Unfixing dependency [directory-tree](https://www.npmjs.com/package/directory-tree) ^2.0.0.
 - Unfixing dependency [git-cli-upgrade-tool](https://www.npmjs.com/package/git-cli-upgrade-tool) ^0.0.9.
