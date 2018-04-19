@@ -18,7 +18,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  onThemeToggle: (evt) => dispatch(changeThemeAction(evt.target.value)),
+  onToggle: (evt) => dispatch(changeThemeAction(evt.target.value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ThemeToggle);
