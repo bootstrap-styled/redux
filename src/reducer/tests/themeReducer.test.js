@@ -48,6 +48,14 @@ describe('themeReducer', () => {
     expect(themeReducer({ ...state, themes: { 'bootstrap-styled': bootstrapStyled, [theme._name]: theme } }, changeThemeAction(theme._name))).toEqual(expectedResult); // eslint-disable-line no-underscore-dangle
   });
 
+  it('should handle the changeTheme action with wrong name without changing the main theme', () => {
+    expectedResult = {
+      theme: bootstrapStyled,
+      themes,
+    };
+    expect(themeReducer({ ...state, themes: { 'bootstrap-styled': bootstrapStyled, [theme._name]: theme } }, changeThemeAction('fakename'))).toEqual(expectedResult); // eslint-disable-line no-underscore-dangle
+  });
+
   it('should handle the deleteTheme action correctly', () => {
     expectedResult = {
       theme: bootstrapStyled,
