@@ -1,6 +1,6 @@
 import { makeTheme } from 'bootstrap-styled';
-import { changeTheme, storeTheme, deleteTheme } from '../actions';
-import { CHANGE_THEME, STORE_THEME, DELETE_THEME } from '../constants';
+import { changeTheme, storeTheme, deleteTheme, deleteThemes } from '../actions';
+import { CHANGE_THEME, STORE_THEME, DELETE_THEME, DELETE_THEMES } from '../constants';
 
 
 describe('bootstrap-styled-redux actions', () => {
@@ -34,6 +34,14 @@ describe('bootstrap-styled-redux actions', () => {
       expect(deleteTheme(theme)).toEqual({
         type: DELETE_THEME,
         theme,
+      });
+    });
+  });
+
+  describe('deleteThemes', () => {
+    it('should dispatch deleteThemes', () => {
+      expect(deleteThemes()).toEqual({
+        type: DELETE_THEMES,
       });
     });
   });
