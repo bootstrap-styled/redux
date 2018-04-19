@@ -1,13 +1,19 @@
+The `<ConnectedBootstrapProvider />` component is the one who let you connect the main theme with Redux.
+
 ```js
 const { createStore } = require('redux');
 const { Provider } = require('react-redux');
 const { default: Badge } = require('bootstrap-styled/lib/Badge');
 const { makeTheme, default: theme } = require('bootstrap-styled/lib/theme');
-const { reducer } = require('bootstrap-styled-redux/lib');
+const { combineReducers } = require('redux');
+// you can import the reducer and use it later with combineReducer 
+const { default: themeReducer } = require('bootstrap-styled-redux/lib/reducer/themeReducer');
+// or import the combineReducer we have made for you
+// const { reducer } = require('bootstrap-styled-redux/lib/reducer');
 
-// create your custom theme
+// create a custom theme to store
 const customTheme = makeTheme({
-  '_name': 'bootstrap-styled-red',
+  '_name': 'bootstrap-styled-red', // not that we rename the theme to create a new one
   '$badge-default-bg': '#991C63',
   '$badge-primary-bg': '#A4D5FF',
   '$badge-success-bg': '#DD4965',
@@ -26,8 +32,11 @@ const customTheme = makeTheme({
   '$enable-hover-media-query': false,
 });
 
-// initialize the default theme and an optional list of themes to be store
-const store = createStore(reducer, {
+// initialize the store theme and an optional list of themes to be store
+const store = createStore(combineReducers({
+  'bs.redux': themeReducer,
+}), {
+  // 2nd parameter of create store is initialValues so we can add our new theme
   'bs.redux': {
     theme, 
     themes: { 
