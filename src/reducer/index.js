@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import themeReducer from './themeReducer';
 
-export default combineReducers({
+const bsReduxReducer = combineReducers({
   'bs.redux': themeReducer,
 });
+
+export default bsReduxReducer;
