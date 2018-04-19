@@ -4,13 +4,15 @@
     "react-dom": "ReactDom",
     "styled-components": "styled",
     "redux": "redux",
-    "react-redux": "react-redux"
+    "react-redux": "react-redux",
+    "react-intl": "react-intl"
   },
   "external": [
     "react",
     "react-dom",
     "styled-components",
     "redux",
-    "react-redux"
+    "react-redux",
+    "react-intl"
   ]
 }
