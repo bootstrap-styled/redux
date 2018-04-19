@@ -24,18 +24,18 @@ describe('<ThemeToggle />', () => {
   });
 
   describe('mapDispatchToProps', () => {
-    describe('onThemeToggle', () => {
+    describe('onToggle', () => {
       it('should be injected', () => {
         const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
-        expect(result.onThemeToggle).toBeDefined();
+        expect(result.onToggle).toBeDefined();
       });
 
-      it('should dispatch onThemeToggle when called', () => {
+      it('should dispatch onToggle when called', () => {
         const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
         const evt = { target: { value: theme } };
-        result.onThemeToggle(evt);
+        result.onToggle(evt);
         expect(dispatch).toHaveBeenCalledWith(changeThemeAction(theme));
       });
     });
