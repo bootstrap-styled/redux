@@ -22,6 +22,10 @@
       "components": "src/components/**/*.js"
     },
     {
+      "name": "Ecosystem",
+      "content": "docs/ecosystem.md"
+    },
+    {
       "name": "FAQ",
       "content": "docs/faq.md"
     },

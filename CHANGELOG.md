@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [?NEXT?] - ????-??-??
 
+- Improve documentation.
+
+## [v0.0.9] - 2018-04-19
+
 - Prevent deleting main theme when using false name on `changeTheme`.
 
 ## [v0.0.8] - 2018-04-19
