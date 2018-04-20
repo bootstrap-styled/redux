@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-styled-redux",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "ConnectBootstrapProvider ReactJS component made for bootstrap-styled and redux",
   "main": "lib/index.js",
   "jsnext:main": "dist/bootstrap-styled-redux.es.js",
@@ -45,7 +45,6 @@
   "files": [
     "LICENSE.md",
     "dist",
-    "internals",
     "lib",
     "bin"
   ],
@@ -216,7 +215,7 @@
     "directory-tree": "^2.0.0",
     "git-cli-upgrade-tool": "^0.0.9",
     "glob": "^7.1.2",
-    "bootstrap-styled-toggle": "^0.0.5",
+    "bootstrap-styled-toggle": "^0.1.0",
     "kopaxgroup-cli-helpers": "^0.0.3",
     "node-map-directory": "^0.1.0",
     "rimraf": "^2.6.2",
