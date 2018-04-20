@@ -2187,9 +2187,9 @@
       }
     },
     "bootstrap-styled-toggle": {
-      "version": "0.0.5",
-      "resolved": "https://registry.npmjs.org/bootstrap-styled-toggle/-/bootstrap-styled-toggle-0.0.5.tgz",
-      "integrity": "sha512-UuqP/c0y3iNVkjnqKUiL6rRxEi7CKscZj5qZcKiejOqDGXDtjoomjQ5He+eQYoIn41QGJKbh1ecEP4YhrT0mIw==",
+      "version": "0.1.0",
+      "resolved": "https://registry.npmjs.org/bootstrap-styled-toggle/-/bootstrap-styled-toggle-0.1.0.tgz",
+      "integrity": "sha512-LKLyA2Yr47KGT3a7869EH5AuD+1bl+YhE5VQpk4MIKUFtAhMEzDR2jrPY0SuuHc1oyDC6GVcmbrkH5hLnq/Scw==",
       "requires": {
         "async": "2.6.0",
         "babel-core": "6.26.0",
