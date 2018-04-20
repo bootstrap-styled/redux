@@ -3,7 +3,7 @@ import { CHANGE_THEME, DELETE_THEME, DELETE_THEMES, STORE_THEME } from '../const
 
 export const initialState = {
   theme: bootstrapStyled,
-  themes: { 'bootstrap-styled': bootstrapStyled },
+  themes: { [bootstrapStyled._name]: bootstrapStyled }, // eslint-disable-line no-underscore-dangle
 };
 
 /* eslint-disable no-underscore-dangle */

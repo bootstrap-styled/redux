@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [?NEXT?] - ????-??-??
 
-- TODO: write changelog before preparing next tag
+- MIT Licensing.
+- Upgrade dependency [bootstrap-styled-toggle](https://www.npmjs.com/package/bootstrap-styled-toggle) from ^0.0.5 to ^0.1.0.
 
 ## [v0.0.10] - 2018-04-20
 

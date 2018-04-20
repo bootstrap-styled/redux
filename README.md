@@ -28,7 +28,7 @@
 ## Documentation
 
   - View [Markdown documentation](docs)
-  - View bootstrap-styled-redux [HTML documentation](https://bootstrap-styled.kopaxgroup.com.yeutech.com/bootstrap-styled-redux) *(require access)*
+  - View bootstrap-styled-redux [HTML documentation](https://bootstrap-styled.kopaxgroup.com.yeutech.com/bootstrap-styled-redux)
   - View rollup-umd [HTML documentation](https://dev-tools.yeutech.com/rollup-umd) *(require access)*
 
 ## License
