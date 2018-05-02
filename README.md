@@ -1,6 +1,6 @@
 # bootstrap-styled-redux
 
-`ConnectBootstrapProvider` ReactJS component made for bootstrap-styled and redux.
+`ConnectedBootstrapProvider` ReactJS component made for bootstrap-styled and redux.
 
 **Master**
 
