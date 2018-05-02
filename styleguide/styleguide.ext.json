@@ -52,10 +52,6 @@
           "content": "docs/release.md"
         }
       ]
-    },
-    {
-      "name": "Local CLI",
-      "content": "docs/local-cli.md"
     }
   ]
 }
