@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-styled-redux",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ConnectedBootstrapProvider ReactJS component made for bootstrap-styled and redux",
   "main": "lib/index.js",
   "jsnext:main": "dist/bootstrap-styled-redux.es.js",
@@ -41,8 +41,7 @@
   "files": [
     "LICENSE.md",
     "dist",
-    "lib",
-    "bin"
+    "lib"
   ],
   "keywords": [
     "bootstrap",
