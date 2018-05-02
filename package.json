@@ -41,8 +41,7 @@
   "files": [
     "LICENSE.md",
     "dist",
-    "lib",
-    "bin"
+    "lib"
   ],
   "keywords": [
     "bootstrap",
