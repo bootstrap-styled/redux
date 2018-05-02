@@ -9,4 +9,4 @@
 
 [![image](https://user-images.githubusercontent.com/1866564/38087911-2f85c6e2-3384-11e8-9383-676504307e3f.png)]($CI_PROJECT_URL)
 
-$PACKAGE_NAME provide a `ConnectedBootstrapProvider` to store your theme in redux!
+$PACKAGE_NAME provide a `ConnectedBootstrapProvider` to store your theme with [redux](https://www.npmjs.com/package/redux).

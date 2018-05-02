@@ -1,4 +1,10 @@
 {
+  "ignore": [
+    "**/__tests__/**",
+    "**/*.test.{js,jsx,ts,tsx}",
+    "**/*.spec.{js,jsx,ts,tsx}",
+    "**/*.d.ts"
+  ],
   "sections": [
     {
       "name": "Introduction",
@@ -13,17 +19,17 @@
       "content": "docs/installation.md"
     },
     {
-      "name": "Getting started",
-      "content": "docs/getting-started.md"
-    },
-    {
-      "name": "Configuration",
-      "content": "docs/configuration.md"
+      "name": "Actions",
+      "content": "docs/actions.md"
     },
     {
       "name": "UI Components",
       "content": "docs/ui.md",
       "components": "src/components/**/*.js"
+    },
+    {
+      "name": "Ecosystem",
+      "content": "docs/ecosystem.md"
     },
     {
       "name": "FAQ",
