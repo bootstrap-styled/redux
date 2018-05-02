@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-styled-redux",
-  "version": "0.1.0",
-  "description": "ConnectBootstrapProvider ReactJS component made for bootstrap-styled and redux",
+  "version": "0.1.1",
+  "description": "ConnectedBootstrapProvider ReactJS component made for bootstrap-styled and redux",
   "main": "lib/index.js",
   "jsnext:main": "dist/bootstrap-styled-redux.es.js",
   "module": "dist/bootstrap-styled-redux.es.js",
@@ -9,9 +9,6 @@
     "IE >= 9",
     "last 2 versions"
   ],
-  "bin": {
-    "rollup-umd": "bin/rollup-umd.js"
-  },
   "scripts": {
     "prebuild": "npm run build:clean",
     "build": "npm run build:lib && npm run build:dist",
@@ -31,7 +28,6 @@
     "prepublish": "npm run build",
     "lint-staged": "lint-staged",
     "ci-publish": "ci-publish",
-    "rollup-umd": "bin/rollup-umd.js",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
   },
@@ -167,7 +163,6 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "exports-loader": "^0.7.0",
-    "gulp": "^3.9.1",
     "istanbul-api": "1.2.2",
     "istanbul-reports": "1.1.4",
     "jest-cli": "^22.4.2",
@@ -176,12 +171,12 @@
     "pre-commit": "^1.2.2",
     "raf": "^3.4.0",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
-    "react-styleguidist": "^6.5.0",
+    "react-styleguidist": "^7.0.9",
     "react-test-renderer": "^16.3.2",
-    "redux": "^3.6.0",
+    "redux": "^4.0.0",
     "rollup": "^0.57.1",
+    "rollup-documentation": "^0.0.10",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-cleanup": "^2.0.0",
     "rollup-plugin-commonjs": "^9.1.0",
@@ -193,11 +188,10 @@
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-visualizer": "^0.5.0",
     "rollup-watch": "^4.3.1",
-    "rsg-components": "^3.0.0",
     "sinon": "^2.3.2",
     "styled-components": "^3.2.6",
     "toctoc": "^0.3.0",
-    "webpack": "^3.11.0"
+    "webpack": "^4.6.0"
   },
   "lint-staged": {
     "*.js": [
@@ -210,26 +204,13 @@
     "lint-staged"
   ],
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "async": "^2.6.0",
-    "directory-tree": "^2.0.0",
-    "git-cli-upgrade-tool": "^0.0.9",
-    "glob": "^7.1.2",
-    "bootstrap-styled-toggle": "^0.1.0",
-    "kopaxgroup-cli-helpers": "^0.0.3",
-    "node-map-directory": "^0.1.0",
-    "rimraf": "^2.6.2",
-    "shelljs": "^0.8.1",
-    "yargs": "^11.0.0",
-    "classnames": "^2.2.5",
+    "bootstrap-styled": "^1.6.5",
+    "bootstrap-styled-toggle": "^0.1.1",
     "prop-types": "^15.6.1",
-    "react-transition-group": "^2.3.0",
-    "bootstrap-styled": "^1.6.2",
     "reselect": "^3.0.1"
   },
   "peerDependencies": {
     "react": "^16.3.2",
-    "react-dom": "^16.3.2",
     "styled-components": "^3.2.6",
     "redux": "^4.0.0",
     "react-redux": "^5.0.7"

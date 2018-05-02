@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [?NEXT?] - ????-??-??
 
+- Corrected doc import line.
+- Using `rollup-documentation`.
+
+## [v0.1.0] - 2018-04-20
+
 - MIT Licensing.
 - Upgrade dependency [bootstrap-styled-toggle](https://www.npmjs.com/package/bootstrap-styled-toggle) from ^0.0.5 to ^0.1.0.
 
