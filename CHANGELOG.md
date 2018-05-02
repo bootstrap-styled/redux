@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [?NEXT?] - ????-??-??
+## [v0.1.2] - 2018-05-02
 
 - Remove bin folder.
 
