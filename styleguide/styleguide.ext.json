@@ -52,10 +52,10 @@
           "content": "docs/release.md"
         }
       ]
-    },
-    {
-      "name": "Local CLI",
-      "content": "docs/local-cli.md"
     }
-  ]
+  ],
+  "ribbon": {
+    "url": "https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-toggle",
+    "text": "Fork us on GitLab"
+  }
 }
