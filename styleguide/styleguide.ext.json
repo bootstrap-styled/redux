@@ -53,5 +53,9 @@
         }
       ]
     }
-  ]
+  ],
+  "ribbon": {
+    "url": "https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-toggle",
+    "text": "Fork us on GitLab"
+  }
 }

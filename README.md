@@ -15,24 +15,16 @@
 
 ## Table of Contents
 
-  - [Changelog](#changelog)
   - [Documentation](#documentation)
   - [License](#license)
 
 ---
 
-## Changelog
-
-  - View [Changelog](CHANGELOG.md)
-  
 ## Documentation
 
-  - View [Markdown documentation](docs)
   - View bootstrap-styled-redux [HTML documentation](https://bootstrap-styled.kopaxgroup.com.yeutech.com/bootstrap-styled-redux)
   - View rollup-umd [HTML documentation](https://dev-tools.yeutech.com/rollup-umd) *(require access)*
 
 ## License
 
 Licensed under the MIT License, Copyright © 2017-present Yeutech Company Limited.
-
-See [LICENSE](LICENSE.md) for more information.
