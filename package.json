@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux.git"
+    "url": "https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux.git"
   },
   "bugs": {
-    "url": "https://module.kopaxgroup.com/styled-components/bootstrap-styled-redux/issues"
+    "url": "https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/issues"
   },
   "files": [
     "LICENSE.md",
