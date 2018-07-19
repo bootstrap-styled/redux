@@ -50,9 +50,7 @@
     "styled-components",
     "react"
   ],
-  "authors": [
-    "Dimitri Kopriwa <dimitri.kopriwa@yeutech.com>"
-  ],
+  "author": "Dimitri Kopriwa <dimitri.kopriwa@yeutech.com>",
   "license": "MIT",
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -132,12 +130,19 @@
     ]
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^2.0.2",
-    "@semantic-release/exec": "^2.2.4",
-    "@semantic-release/git": "^5.0.0",
+    "@semantic-release/changelog": "^3.0.0",
+    "@semantic-release/exec": "^2.3.0",
+    "@semantic-release/git": "^7.0.0",
     "@semantic-release/gitlab": "^2.1.4",
-    "@semantic-release/npm": "^3.3.1",
-    "@yeutech/rollup-documentation": "^2.3.0",
+    "@semantic-release/npm": "^4.0.0",
+    "@yeutech-lab/rollup-umd-documentation": "^2.3.14",
+    "@yeutech/rollup-documentation": "^2.3.4",
+    "@yeutech/rollup-umd-ci-build": "^1.0.5",
+    "@yeutech/rollup-umd-ci-deploy": "^1.0.7",
+    "@yeutech/rollup-umd-ci-release": "^1.0.5",
+    "@yeutech/rollup-umd-ci-release-transitive": "^1.0.9",
+    "@yeutech/rollup-umd-ci-test": "^1.0.4",
+    "@yeutech/rollup-umd-scripts": "^0.15.22",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
@@ -194,11 +199,11 @@
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-visualizer": "^0.5.0",
     "rollup-watch": "^4.3.1",
-    "semantic-release": "^15.5.2",
+    "semantic-release": "^15.8.0",
     "sinon": "^2.3.2",
-    "styled-components": "^3.3.2",
+    "styled-components": "^3.3.0",
     "toctoc": "^0.3.0",
-    "webpack": "^4.6.0"
+    "webpack": "^4.16.1"
   },
   "lint-staged": {
     "*.js": [
@@ -211,13 +216,14 @@
     "lint-staged"
   ],
   "dependencies": {
-    "bootstrap-styled": "^1.6.5",
+    "bootstrap-styled": "^1.7.4",
     "bootstrap-styled-toggle": "^1.0.2",
+    "bootstrap-styled-provider": "^1.1.6",
     "prop-types": "^15.6.1",
     "reselect": "^3.0.1"
   },
   "peerDependencies": {
-    "react": "^16.3.2",
+    "react": "^16.4.0",
     "styled-components": "^3.3.2",
     "redux": "^4.0.0",
     "react-redux": "^5.0.7"
@@ -264,6 +270,10 @@
     "fail": false,
     "npmPublish": true,
     "verifyConditions": [
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive verify"
+      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/git",
@@ -273,6 +283,10 @@
       }
     ],
     "prepare": [
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive prepare"
+      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       {
@@ -291,7 +305,7 @@
       "@semantic-release/npm",
       {
         "path": "@semantic-release/exec",
-        "cmd": "echo ${nextRelease.version} > ~/release_version"
+        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive publish ${nextRelease.version}"
       },
       {
         "path": "@semantic-release/gitlab",
