@@ -1,3 +1,11 @@
+## [1.0.3](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/compare/v1.0.2...v1.0.3) (2018-09-17)
+
+
+### Bug Fixes
+
+* **package.json:** corrected wrong verison number ([2eb8e84](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/commit/2eb8e84))
+* **packager.json:** update semantic and rollup-doc ([859468e](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/commit/859468e))
+
 ## [1.0.2](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/compare/v1.0.1...v1.0.2) (2018-07-19)
 
 
