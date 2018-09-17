@@ -1,4 +1,4 @@
-## [1.0.3](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/compare/v1.0.2...v1.0.3) (2018-09-17)
+## [1.0.3](https://module.kopaxgroup.com/bootstrap-styled/redux/compare/v1.0.2...v1.0.3) (2018-09-17)
 
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@bootstrap-styled/redux",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -19530,7 +19530,6 @@
               "version": "1.1.11",
               "bundled": true,
               "dev": true,
-              "optional": true,
               "requires": {
                 "balanced-match": "^1.0.0",
                 "concat-map": "0.0.1"
@@ -19699,7 +19698,6 @@
               "version": "3.0.4",
               "bundled": true,
               "dev": true,
-              "optional": true,
               "requires": {
                 "brace-expansion": "^1.1.7"
               }

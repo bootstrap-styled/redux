@@ -1,4 +1,4 @@
-# bootstrap-styled-redux
+# @bootstrap-styled/redux
 
 `ConnectedBootstrapProvider` ReactJS component made for bootstrap-styled and redux.
 
