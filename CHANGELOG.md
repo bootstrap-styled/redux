@@ -1,3 +1,14 @@
+## [1.0.2](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/compare/v1.0.1...v1.0.2) (2018-07-19)
+
+
+### Bug Fixes
+
+* **gitlab-ci.yml:** updated following changes described in https://module.kopaxgroup.com/snippets/11. ([1367828](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/commit/1367828))
+* **package.json:** fixed mistake with prepare release ([607c87d](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/commit/607c87d))
+* **package.json:** updated a few deps in regards to new rollup-umd-documenatation update. ([5ab3b3c](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/commit/5ab3b3c))
+* **package.json, COnnectedBootstrapProvider:** added new version of bootstrap-provider + corrected wrong import ([b420a90](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/commit/b420a90))
+* **styeleguide:** added changes for proper versioning. ([0bfe3fd](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/commit/0bfe3fd))
+
 ## [1.0.1](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/compare/v1.0.0...v1.0.1) (2018-06-15)
 
 
