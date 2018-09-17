@@ -1,11 +1,11 @@
 {
-  "name": "bootstrap-styled-redux",
+  "name": "@bootstrap-styled/redux",
   "version": "1.0.2",
   "description": "ConnectedBootstrapProvider ReactJS component made for bootstrap-styled and redux",
   "main": "lib/index.js",
-  "jsnext:main": "dist/bootstrap-styled-redux.es.js",
-  "module": "dist/bootstrap-styled-redux.es.js",
-  "homepage": "https://bootstrap-styled.yeutech.com/bootstrap-styled-redux",
+  "jsnext:main": "dist/@bootstrap-styled/redux.es.js",
+  "module": "dist/@bootstrap-styled/redux.es.js",
+  "homepage": "https://bootstrap-styled.yeutech.com/redux",
   "browserslist": [
     "IE >= 9",
     "last 2 versions"
@@ -135,13 +135,13 @@
     "@semantic-release/git": "^7.0.0",
     "@semantic-release/gitlab": "^2.1.4",
     "@semantic-release/npm": "^4.0.0",
-    "@yeutech-lab/rollup-umd-documentation": "^2.3.14",
+    "@yeutech-lab/rollup-umd-documentation": "^2.3.18",
     "@yeutech/rollup-documentation": "^2.3.4",
     "@yeutech/rollup-umd-ci-build": "^1.0.5",
     "@yeutech/rollup-umd-ci-deploy": "^1.0.7",
     "@yeutech/rollup-umd-ci-release": "^1.0.5",
-    "@yeutech/rollup-umd-ci-release-transitive": "^1.0.9",
-    "@yeutech/rollup-umd-ci-test": "^1.0.4",
+    "@yeutech/rollup-umd-ci-release-transitive": "^1.1.6",
+    "@yeutech/rollup-umd-ci-test": "^1.0.6",
     "@yeutech/rollup-umd-scripts": "^0.15.22",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -183,7 +183,7 @@
     "raf": "^3.4.0",
     "react": "^16.3.2",
     "react-redux": "^5.0.7",
-    "react-styleguidist": "^7.0.9",
+    "react-styleguidist": "7.1.0",
     "react-test-renderer": "^16.3.2",
     "redux": "^4.0.0",
     "request": "^2.87.0",
@@ -262,7 +262,7 @@
   "private": false,
   "publishConfig": {
     "tag": "latest",
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://npm.kopaxgroup.com"
   },
   "release": {
     "branch": "master",
