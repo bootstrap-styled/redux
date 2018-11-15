@@ -214,8 +214,7 @@
     "@bootstrap-styled/toggle": "^1.0.7",
     "@bootstrap-styled/v4": "^1.2.2",
     "prop-types": "^15.6.2",
-    "react-intl": "^2.7.2",
-    "reselect": "^4.0.0"
+    "reselect": "^3.0.1"
   },
   "peerDependencies": {
     "react": "^16.6.3",

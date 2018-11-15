@@ -2,7 +2,8 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { Button, theme } from 'bootstrap-styled';
+import { theme } from 'bootstrap-styled';
+import Button from '@bootstrap-styled/v4';
 import ConnectedBootstrapProvider from '../index';
 import reducer from '../../../reducer';
 
