@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/bootstrap-styled/redux/compare/v1.0.4...v1.0.5) (2018-11-15)
+
+
+### Bug Fixes
+
+* **release:** GitHub release https://github.com/bootstrap-styled/redux ([af49d11](https://github.com/bootstrap-styled/redux/commit/af49d11))
+
 ## [1.0.4](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/compare/v1.0.3...v1.0.4) (2018-11-15)
 
 
