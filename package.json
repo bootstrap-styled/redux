@@ -311,24 +311,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "transitive": {
-    "name": "redux",
-    "scope": "bootstrap-styled",
-    "scopedName": "@bootstrap-styled/redux",
-    "jsnext:main": "dist/@bootstrap-styled/redux.es.js",
-    "module": "dist/@bootstrap-styled/redux.es.js",
-    "homepage": "https://bootstrap-styled.github.io/redux",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/bootstrap-styled/redux.git"
-    },
-    "bugs": {
-      "url": "https://github.com/bootstrap-styled/redux/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
-    }
   }
 }
