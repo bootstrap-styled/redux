@@ -1,4 +1,4 @@
-The `<ThemeToggle />` is an example made of [bootstrap-styled-toggle](https://bootstrap-styled.yeutech.com/bootstrap-styled-toggle) Component.
+The `<ThemeToggle />` is an example made of [@bootstrap-styled/toggle](https://bootstrap-styled.github.io/toggle) Component.
 
 It demonstrate how to change the theme by reading the `themes` stored.
  
