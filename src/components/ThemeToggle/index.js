@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Toggle from 'bootstrap-styled-toggle/lib/components/Toggle';
+import Toggle from '@bootstrap-styled/toggle/lib/components/Toggle';
 import { createStructuredSelector } from 'reselect';
 import { changeTheme as changeThemeAction } from '../../actions';
 import { selectValue, selectValues } from '../../selectors';
@@ -10,7 +10,6 @@ import { selectValue, selectValues } from '../../selectors';
  * @constructor
  */
 export const ThemeToggle = (props) => <Toggle {...props} />;
-
 
 const mapStateToProps = createStructuredSelector({
   value: selectValue,

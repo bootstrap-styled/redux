@@ -1,4 +1,4 @@
-# bootstrap-styled-redux
+# @bootstrap-styled/redux
 
 `ConnectedBootstrapProvider` ReactJS component made for bootstrap-styled and redux.
 
@@ -22,7 +22,7 @@
 
 ## Documentation
 
-  - View bootstrap-styled-redux [HTML documentation](https://bootstrap-styled.kopaxgroup.com.yeutech.com/bootstrap-styled-redux)
+  - View @bootstrap-styled/redux [HTML documentation](https://bootstrap-styled.kopaxgroup.com.yeutech.com/bootstrap-styled-redux)
   - View rollup-umd [HTML documentation](https://dev-tools.yeutech.com/rollup-umd) *(require access)*
 
 ## License
