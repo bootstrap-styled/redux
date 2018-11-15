@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { theme } from 'bootstrap-styled';
-import Button from '@bootstrap-styled/v4';
+import Button from '@bootstrap-styled/v4/lib/Button';
 import ConnectedBootstrapProvider from '../index';
 import reducer from '../../../reducer';
 
