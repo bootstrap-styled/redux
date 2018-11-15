@@ -7,9 +7,9 @@ const { Form, Badge, makeTheme, theme } = require('bootstrap-styled/lib');
 const { combineReducers } = require('redux');
 
 // you can import the reducer and use it later with combineReducer 
-const { default: themeReducer } = require('bootstrap-styled-redux/lib/reducer/themeReducer');
+const { default: themeReducer } = require('@bootstrap-styled/redux/lib/reducer/themeReducer');
 // or import the combineReducer we have made for you
-// const { reducer } = require('bootstrap-styled-redux/lib/reducer');
+// const { reducer } = require('@bootstrap-styled/redux/lib/reducer');
 
 // create a custom theme to store
 const customTheme = makeTheme({

@@ -13,3 +13,4 @@ dist
 /public
 /docs/cli
 /docs/declinations
+package-lock.json
