@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "jsnext:main": "dist/@bootstrap-styled/redux.es.js",
   "module": "dist/@bootstrap-styled/redux.es.js",
-  "homepage": "https://bootstrap-styled.yeutech.com/redux",
+  "homepage": "https://bootstrap-styled.github.io/redux",
   "browserslist": [
     "IE >= 9",
     "last 2 versions"
@@ -29,15 +29,14 @@
     "prepublish": "npm run build",
     "lint-staged": "lint-staged",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
-    "postinstall": "node -e \"console.log('\\u001b[31m@bootstrap-styled/redux is deprecated, use @bootstrap-styled/redux instead.')\" || exit 0"
+    "styleguide:build": "styleguidist build"
   },
   "repository": {
     "type": "git",
-    "url": "https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux.git"
+    "url": "https://github.com/bootstrap-styled/redux.git"
   },
   "bugs": {
-    "url": "https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-redux/issues"
+    "url": "https://github.com/bootstrap-styled/redux/issues"
   },
   "files": [
     "LICENSE.md",
@@ -133,9 +132,8 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.0",
-    "@semantic-release/exec": "^2.3.0",
-    "@semantic-release/git": "^7.0.0",
-    "@semantic-release/gitlab": "^2.1.4",
+    "@semantic-release/git": "^7.0.5",
+    "@semantic-release/github": "^5.2.1",
     "@semantic-release/npm": "^4.0.0",
     "@yeutech-lab/rollup-umd-documentation": "^2.4.4",
     "babel-cli": "^6.26.0",
@@ -255,34 +253,21 @@
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js"
   },
-  "private": false,
   "publishConfig": {
+    "registry": "https://registry.npmjs.org",
     "tag": "latest",
-    "registry": "https://npm.kopaxgroup.com"
+    "access": "public"
   },
   "release": {
     "branch": "master",
-    "success": false,
-    "fail": false,
     "npmPublish": true,
     "verifyConditions": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive verify"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/git",
-      {
-        "path": "@semantic-release/gitlab",
-        "gitlabUrl": "https://module.kopaxgroup.com"
-      }
+      "@semantic-release/github"
     ],
     "prepare": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive prepare"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       {
@@ -299,37 +284,55 @@
     "publish": [
       "@semantic-release/npm",
       {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive publish ${nextRelease.version}"
-      },
-      {
-        "path": "@semantic-release/gitlab",
-        "gitlabUrl": "https://module.kopaxgroup.com"
+        "path": "@semantic-release/github",
+        "assets": [
+          {
+            "path": "package.json"
+          },
+          {
+            "path": "LICENSE.md"
+          },
+          {
+            "path": "CHANGELOG.md"
+          },
+          {
+            "path": "README.md"
+          },
+          {
+            "path": "dist/*.esm.js",
+            "label": "ES module"
+          },
+          {
+            "path": "dist/*.esm.js.map",
+            "label": "ES module source map"
+          },
+          {
+            "path": "dist/*.min.js",
+            "label": "UMD compressed"
+          },
+          {
+            "path": "dist/*.min.js.map",
+            "label": "UMD compressed source map"
+          },
+          {
+            "path": "dist/*.cjs.min.js",
+            "label": "CJS compressed"
+          },
+          {
+            "path": "dist/*.cjs.min.js.map",
+            "label": "CJS compressed source map"
+          },
+          {
+            "path": "lib/*.js",
+            "label": "CJS folder"
+          }
+        ]
       }
     ]
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "transitive": {
-    "name": "redux",
-    "scope": "bootstrap-styled",
-    "scopedName": "@bootstrap-styled/redux",
-    "jsnext:main": "dist/@bootstrap-styled/redux.es.js",
-    "module": "dist/@bootstrap-styled/redux.es.js",
-    "homepage": "https://bootstrap-styled.github.io/redux",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/bootstrap-styled/redux.git"
-    },
-    "bugs": {
-      "url": "https://github.com/bootstrap-styled/redux/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
     }
   }
 }
