@@ -3,7 +3,7 @@ The `<ThemeToggle />` is an example made of [@bootstrap-styled/toggle](https://b
 It demonstrate how to change the theme by reading the `themes` stored.
  
 ```js
-const { Form, Button } = require('bootstrap-styled/lib');
+const { Form, Button } = require('@bootstrap-styled/v4/lib');
 <ConnectedBootstrapProvider injectGlobal={false}>
   <Form>
     <ThemeToggle />
