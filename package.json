@@ -1,6 +1,6 @@
 {
   "name": "@bootstrap-styled/redux",
-  "version": "0.0.0-development",
+  "version": "1.0.4",
   "description": "ConnectedBootstrapProvider ReactJS component made for bootstrap-styled and redux",
   "main": "lib/index.js",
   "jsnext:main": "dist/@bootstrap-styled/redux.es.js",
@@ -29,7 +29,8 @@
     "prepublish": "npm run build",
     "lint-staged": "lint-staged",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "postinstall": "node -e \"console.log('\\u001b[31m@bootstrap-styled/redux is deprecated, use @bootstrap-styled/redux instead.')\" || exit 0"
   },
   "repository": {
     "type": "git",
