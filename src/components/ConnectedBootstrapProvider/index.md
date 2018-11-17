@@ -3,7 +3,8 @@ The `<ConnectedBootstrapProvider />` component is the one who let you connect th
 ```js
 const { createStore } = require('redux');
 const { Provider } = require('react-redux');
-const { Form, Badge, makeTheme, theme } = require('bootstrap-styled/lib');
+const { makeTheme, theme } = require('bootstrap-styled/lib');
+const { Form, Badge } = require('@bootstrap-styled/v4/lib');
 const { combineReducers } = require('redux');
 
 // you can import the reducer and use it later with combineReducer 
