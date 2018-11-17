@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/bootstrap-styled/redux/compare/v1.0.7...v1.0.8) (2018-11-17)
+
+
+### Bug Fixes
+
+* **es6:** fix es6 package ([05c3c11](https://github.com/bootstrap-styled/redux/commit/05c3c11))
+
 ## [1.0.7](https://github.com/bootstrap-styled/redux/compare/v1.0.6...v1.0.7) (2018-11-17)
 
 
