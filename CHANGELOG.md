@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/bootstrap-styled/redux/compare/v1.0.5...v1.0.6) (2018-11-17)
+
+
+### Bug Fixes
+
+* **dependencies:** update [@bootstrap-styled](https://github.com/bootstrap-styled)/toggle, [@bootstrap-styled](https://github.com/bootstrap-styled)/v4 dependencies and fixed doc example ([8c0c5da](https://github.com/bootstrap-styled/redux/commit/8c0c5da))
+
 ## [1.0.5](https://github.com/bootstrap-styled/redux/compare/v1.0.4...v1.0.5) (2018-11-15)
 
 
