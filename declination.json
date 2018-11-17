@@ -3,15 +3,12 @@
     "react": "React",
     "styled-components": "styled",
     "redux": "redux",
-    "react-redux": "react-redux",
-    "react-intl": "react-intl",
-    "reselect": "reselect"
+    "react-redux": "react-redux"
   },
   "external": [
     "react",
     "styled-components",
     "redux",
-    "react-redux",
-    "react-intl"
+    "react-redux"
   ]
 }
