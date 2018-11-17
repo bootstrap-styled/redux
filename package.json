@@ -135,7 +135,7 @@
     "@semantic-release/git": "^7.0.5",
     "@semantic-release/github": "^5.2.1",
     "@semantic-release/npm": "^4.0.0",
-    "@yeutech-lab/rollup-umd-documentation": "^2.4.4",
+    "@yeutech-lab/rollup-umd-documentation": "^2.4.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
@@ -210,8 +210,8 @@
   ],
   "dependencies": {
     "@bootstrap-styled/provider": "^1.2.0",
-    "@bootstrap-styled/toggle": "^1.0.9",
-    "@bootstrap-styled/v4": "^1.2.5",
+    "@bootstrap-styled/toggle": "^1.0.10",
+    "@bootstrap-styled/v4": "^1.2.6",
     "prop-types": "^15.6.2",
     "reselect": "^3.0.1"
   },

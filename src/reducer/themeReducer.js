@@ -1,6 +1,8 @@
 import bootstrapStyled from 'bootstrap-styled/lib/theme';
 import { CHANGE_THEME, DELETE_THEME, DELETE_THEMES, STORE_THEME } from '../constants';
 
+
+/* fix bs default name */
 export const initialState = {
   theme: bootstrapStyled,
   themes: { [bootstrapStyled._name]: bootstrapStyled }, // eslint-disable-line no-underscore-dangle
