@@ -51,6 +51,9 @@ const plugins = [
   }),
   commonjs({
     include: 'node_modules/**',
+    namedExports: {
+      'react-intl': ['injectIntl', 'intlShape', 'IntlProvider', 'FormattedMessage', 'defineMessages'],
+    },
   }),
   replace({
     'process.env.NODE_ENV': JSON.stringify(prod ? 'production' : 'development'),
