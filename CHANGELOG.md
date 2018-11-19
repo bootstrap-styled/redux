@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/bootstrap-styled/redux/compare/v1.0.10...v1.0.11) (2018-11-19)
+
+
+### Bug Fixes
+
+* **immutable:** Allow to use an immutable root store and detect the get method to get bs.redux store ([b2420f7](https://github.com/bootstrap-styled/redux/commit/b2420f7))
+
 ## [1.0.10](https://github.com/bootstrap-styled/redux/compare/v1.0.9...v1.0.10) (2018-11-19)
 
 
