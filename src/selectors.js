@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-export const selectBsRedux = (state) => state['bs.redux'];
+export const selectBsRedux = (state) => state.get ? state.get('bs.redux') : state['bs.redux'];
 
 /**
  * themes
