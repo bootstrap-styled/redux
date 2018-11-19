@@ -6,7 +6,7 @@ To create the store, you need to use either our `combinedReducer`:
 
 ```js static
 import { createStore } from 'redux';
-import { combinedReducer } from 'bootstrap-styled-redux/lib';
+import { combinedReducer } from '@bootstrap-styled/redux/lib';
 
 const store = createStore(combinedReducer);
 ```
@@ -15,7 +15,7 @@ or to combine it your self
 
 ```js static
 import { createStore, combineReducers } from 'redux';
-import { themeReducer } from 'bootstrap-styled-redux/lib';
+import { themeReducer } from '@bootstrap-styled/redux/lib';
 // import your own reducer
 import appReducer from './reducer'; 
 
