@@ -14,11 +14,11 @@ describe('selectBsRedux', () => {
   });
 
   describe('selectBsRedux', () => {
-    it('should select the bootstrap-styled-redux state', () => {
+    it('should select the @bootstrap-styled/redux state', () => {
       expect(selectBsRedux(state)).toEqual(state['bs.redux']);
     });
 
-    it('should select the bootstrap-styled-redux state if the store is immutable and have a get method', () => {
+    it('should select the @bootstrap-styled/redux state if the store is immutable and have a get method', () => {
       state.get = jest.fn();
       selectBsRedux(state);
       expect(state.get).toHaveBeenCalledWith('bs.redux');
