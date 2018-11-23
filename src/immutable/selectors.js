@@ -1,13 +1,13 @@
 import { createSelector } from 'reselect';
 
-export const selectBsRedux = (state) => state['bs.redux'];
+export const selectBsRedux = (state) => state.get('bs.redux');
 
 /**
  * themes
  */
 export const selectThemes = createSelector(
   selectBsRedux,
-  (bsReduxState) => bsReduxState.themes,
+  (bsReduxState) => bsReduxState.get('themes'),
 );
 
 /**
@@ -15,7 +15,7 @@ export const selectThemes = createSelector(
  */
 export const selectTheme = createSelector(
   selectBsRedux,
-  (bsReduxState) => bsReduxState.theme,
+  (bsReduxState) => bsReduxState.get('theme'),
 );
 
 /**
@@ -23,7 +23,7 @@ export const selectTheme = createSelector(
  */
 export const selectValue = createSelector(
   selectBsRedux,
-  (bsReduxState) => bsReduxState.theme._name, // eslint-disable-line no-underscore-dangle
+  (bsReduxState) => bsReduxState.getIn(['theme', '_name']), // eslint-disable-line no-underscore-dangle
 );
 
 /**
@@ -31,5 +31,5 @@ export const selectValue = createSelector(
  */
 export const selectValues = createSelector(
   selectBsRedux,
-  (bsReduxState) => Object.keys(bsReduxState.themes).map((key) => bsReduxState.themes[key]._name), // eslint-disable-line no-underscore-dangle
+  (bsReduxState) => bsReduxState.get('themes').keySeq().toArray().map((t) => t._name), // eslint-disable-line no-underscore-dangle
 );

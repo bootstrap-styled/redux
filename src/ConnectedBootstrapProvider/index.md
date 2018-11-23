@@ -1,30 +1,26 @@
 The `<ConnectedBootstrapProvider />` component is the one who let you connect the main theme with Redux.
 
 ```js
-const { createStore } = require('redux');
+const { createStore, combineReducers } = require('redux');
 const { Provider } = require('react-redux');
 const { makeTheme, theme } = require('bootstrap-styled/lib');
 const { Form, Badge } = require('@bootstrap-styled/v4/lib');
-const { combineReducers } = require('redux');
+const { default: themeReducer } = require('@bootstrap-styled/redux/lib/reducer');
 
-// you can import the reducer and use it later with combineReducer 
-const { default: themeReducer } = require('@bootstrap-styled/redux/lib/reducer/themeReducer');
-// or import the combineReducer we have made for you
-// const { reducer } = require('@bootstrap-styled/redux/lib/reducer');
-
-// create a custom theme to store
-const customTheme = makeTheme({
-  '_name': 'bootstrap-styled-red', // not that we rename the theme to create a new one
+// create themes to be stored
+const sampleTheme = makeTheme({
+  '_name': 'bootstrap-styled-sample', // not that we rename the theme to create a new one
   '$badge-default-bg': '#991C63',
   '$badge-primary-bg': '#A4D5FF',
   '$badge-success-bg': '#DD4965',
   '$badge-info-bg': '#69DD8E',
   '$badge-warning-bg': '#701BDD',
-  '$badge-danger-bg': '#3D5',
-  '$badge-color': '#f29',
-  '$badge-link-hover-color': '#479',
-  '$badge-font-size': '115%',
-  '$badge-font-weight': 'normal',
+});
+const sampleThemeBis = makeTheme({
+  ...sampleTheme,
+  '_name': 'bootstrap-styled-bis', // not that we rename the theme to create a new one
+  '$badge-default-bg': '#A4D5FF',
+  '$badge-primary-bg': '#991C63',
   '$badge-padding-x': '.18em',
   '$badge-padding-y': '.1em',
   '$badge-pill-padding-x': '.2em',
@@ -33,16 +29,19 @@ const customTheme = makeTheme({
   '$enable-hover-media-query': false,
 });
 
-// initialize the store theme and an optional list of themes to be store
-const store = createStore(combineReducers({
-  'bs.redux': themeReducer,
-}), {
-  // 2nd parameter of create store is initialValues so we can add our new theme
+const reducers = combineReducers({
+ 'bs.redux': themeReducer,
+ // add more reducers to your app
+});
+
+const store = createStore(reducers, {
+  // 2nd parameter of create store is for store initial values
   'bs.redux': {
     theme, 
     themes: { 
       [theme._name]: theme,
-      [customTheme._name]: customTheme, 
+      [sampleTheme._name]: sampleTheme,
+      [sampleThemeBis._name]: sampleThemeBis,
     },  
   }  
 });

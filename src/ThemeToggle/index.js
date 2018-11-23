@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Toggle from '@bootstrap-styled/toggle/lib/components/Toggle';
 import { createStructuredSelector } from 'reselect';
-import { changeTheme as changeThemeAction } from '../../actions';
-import { selectValue, selectValues } from '../../selectors';
+import { changeTheme as changeThemeAction } from '../actions';
+import { selectValue, selectValues } from '../selectors';
 
 /**
  * ThemeToggle is used to display a select option to change theme

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import theme, { makeTheme } from 'bootstrap-styled/lib/theme';
 import Provider from 'react-redux/lib/components/Provider';
 import PropTypes from 'prop-types';
-import { createStore, applyMiddleware, compose } from 'redux';
-import reducer from '../../src/reducer';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import themeReducer from '../../src/reducer';
 
 export default class Wrapper extends Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
@@ -35,7 +35,9 @@ export default class Wrapper extends Component { // eslint-disable-line react/pr
       '$btn-warning-bg': 'darkgrey',
     });
 
-    const store = createStore(reducer, {
+    const store = createStore(combineReducers({
+      'bs.redux': themeReducer,
+    }), {
       'bs.redux': {
         theme,
         themes: {
