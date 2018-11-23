@@ -1,3 +1,17 @@
+## [1.0.12](https://github.com/bootstrap-styled/redux/compare/v1.0.11...v1.0.12) (2018-11-23)
+
+
+### Bug Fixes
+
+* **dependencies:** added bootstrap-styled to dependencies ([43fb0b2](https://github.com/bootstrap-styled/redux/commit/43fb0b2))
+* **dependencies:** upgrade [@bootstrap-styled](https://github.com/bootstrap-styled)/provider and [@bootstrap-styled](https://github.com/bootstrap-styled)/toggle ([6340262](https://github.com/bootstrap-styled/redux/commit/6340262))
+* **dependencies:** Upgrade [@bootstrap-styled](https://github.com/bootstrap-styled)/provider to v1.3.0 ([7550c05](https://github.com/bootstrap-styled/redux/commit/7550c05))
+
+
+### Performance Improvements
+
+* **babel:** Using Babel v7, added ImmutableJS react component, reducer and selectors ([0999006](https://github.com/bootstrap-styled/redux/commit/0999006))
+
 ## [1.0.11](https://github.com/bootstrap-styled/redux/compare/v1.0.10...v1.0.11) (2018-11-19)
 
 
