@@ -2,16 +2,17 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
 import { createStore } from 'redux';
+import { combineReducers } from 'redux-immutable';
 import theme from 'bootstrap-styled/lib/theme';
 import { changeTheme as changeThemeAction } from '../../../actions';
-import reducer from '../../../reducer';
-import ThemeToggle, { mapDispatchToProps } from '../index';
+import reducer from '../../reducer';
+import ThemeToggle, { mapDispatchToProps } from '..';
 
 /* eslint-disable function-paren-newline */
 describe('<ThemeToggle />', () => {
   let store;
   beforeAll(() => {
-    store = createStore(reducer);
+    store = createStore(combineReducers({ 'bs.redux': reducer }));
   });
 
   it('should render the default language messages', () => {

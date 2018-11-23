@@ -1,4 +1,4 @@
-You can find more project that use $PACKAGE_NAME:
+List of projects that use $PACKAGE_NAME:
 
 - [@bootstrap-styled/saga](https://bootstrap-styled.github.io/saga) allow you to mount a store for asynchronous theme. 
 <!-- - [@bootstrap-styled/persist](https://bootstrap-styled.github.io/persist) allow you to mount a store for local persistent theme. -->

@@ -2,25 +2,14 @@
 $ npm install $PACKAGE_NAME --save
 ```
 
-To create the store, you need to use either our `combinedReducer`: 
+You need to import our reducer and use it while you combine your reducers: 
 
 ```js static
-import { createStore } from 'redux';
-import combinedReducer from '@bootstrap-styled/redux/lib/reducer';
+import { createStore, combineReducer } from 'redux';
+import themeReducer from '@bootstrap-styled/redux/lib/reducer';
 
-const store = createStore(combinedReducer);
-```
-
-or to combine it your self
-
-```js static
-import { createStore, combineReducers } from 'redux';
-import themeReducer from '@bootstrap-styled/redux/lib/reducer/themeReducer';
-// import your own reducer
-import appReducer from './reducer'; 
-
-const store = createStore(combineReducers({
-  'bs.redux': themeReducer,
-  app: appReducer,
+const store = createStore(combinedReducer({
+  'bs.redux': themeReducer, 
+   app: appReducer, // your stuff
 }));
 ```

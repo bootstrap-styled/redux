@@ -1,30 +1,32 @@
+import { fromJS } from 'immutable';
 import React from 'react';
 import { mount } from 'enzyme';
 import { createStore } from 'redux';
+import { combineReducers } from 'redux-immutable';
 import { Provider } from 'react-redux';
 import { theme } from 'bootstrap-styled';
 import Button from '@bootstrap-styled/v4/lib/Button';
-import ConnectedBootstrapProvider from '../index';
-import reducer from '../../../reducer';
+import ConnectedBootstrapProvider from '..';
+import reducer from '../../reducer';
 
 /* eslint-disable function-paren-newline */
 describe('<ConnectedBootstrapProvider />', () => {
   let store;
   beforeAll(() => {
-    store = createStore(reducer);
+    store = createStore(combineReducers({ 'bs.redux': reducer }));
   });
 
   it('should render the ConnectedBootstrapProvider', () => {
     const renderedComponent = mount(
       <Provider store={store}>
-        <ConnectedBootstrapProvider injectGlobal={false}>
+        <ConnectedBootstrapProvider injectGlobal={false} reset={false}>
           <Button>Hey</Button>
         </ConnectedBootstrapProvider>
       </Provider>
     );
 
     expect(renderedComponent.contains(<Button>Hey</Button>)).toBe(true);
-    expect(renderedComponent.find('BootstrapProvider').prop('theme')).toBe(theme);
+    expect(fromJS(renderedComponent.find('BootstrapProvider').prop('theme')).hashCode()).toBe(fromJS(theme).hashCode());
   });
 });
 /* eslint-enable function-paren-newline */

@@ -1,11 +1,11 @@
 import { theme as bootstrapStyled } from 'bootstrap-styled';
-import themeReducer, { initialState } from '../themeReducer';
+import themeReducer, { initialState } from '../reducer';
 import {
   changeTheme as changeThemeAction,
   deleteTheme as deleteThemeAction,
   deleteThemes as deleteThemesAction,
   storeTheme as storeThemeAction,
-} from '../../actions';
+} from '../actions';
 
 describe('themeReducer', () => {
   let state;
