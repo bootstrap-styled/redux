@@ -173,6 +173,7 @@
     "babel-plugin-react-transform": "^3.0.0",
     "babel-plugin-styled-components": "^1.5.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
+    "bootstrap-styled": "^2.0.4",
     "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
