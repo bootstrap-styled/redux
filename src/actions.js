@@ -1,4 +1,6 @@
-import { CHANGE_THEME, STORE_THEME, DELETE_THEME, DELETE_THEMES } from './constants';
+import {
+  CHANGE_THEME, STORE_THEME, DELETE_THEME, DELETE_THEMES,
+} from './constants';
 
 /**
  * Used to change the theme
