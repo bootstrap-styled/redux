@@ -1,6 +1,8 @@
 
 import { initialState } from '../reducer';
-import { selectBsRedux, selectTheme, selectThemes, selectValue, selectValues } from '../selectors';
+import {
+  selectBsRedux, selectTheme, selectThemes, selectValue, selectValues,
+} from '../selectors';
 
 describe('selectBsRedux', () => {
   let state;

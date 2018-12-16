@@ -1,6 +1,10 @@
 import { makeTheme } from 'bootstrap-styled';
-import { changeTheme, storeTheme, deleteTheme, deleteThemes } from '../actions';
-import { CHANGE_THEME, STORE_THEME, DELETE_THEME, DELETE_THEMES } from '../constants';
+import {
+  changeTheme, storeTheme, deleteTheme, deleteThemes,
+} from '../actions';
+import {
+  CHANGE_THEME, STORE_THEME, DELETE_THEME, DELETE_THEMES,
+} from '../constants';
 
 
 describe('bootstrap-styled-redux actions', () => {

@@ -1,6 +1,8 @@
 import { fromJS } from 'immutable';
 import { initialState } from '../reducer';
-import { selectBsRedux, selectTheme, selectThemes, selectValue, selectValues } from '../selectors';
+import {
+  selectBsRedux, selectTheme, selectThemes, selectValue, selectValues,
+} from '../selectors';
 
 describe('selectBsRedux immutable', () => {
   let state;
