@@ -1,3 +1,15 @@
+## [1.0.13](https://github.com/bootstrap-styled/redux/compare/v1.0.12...v1.0.13) (2018-12-16)
+
+
+### Bug Fixes
+
+* **dependencies:** upgrade to [@bootstrap-styled](https://github.com/bootstrap-styled)/v4 1.3.1 ([1160a84](https://github.com/bootstrap-styled/redux/commit/1160a84))
+
+
+### Performance Improvements
+
+* **greenkeeper:** added greekeeper ([e8eba2e](https://github.com/bootstrap-styled/redux/commit/e8eba2e))
+
 ## [1.0.12](https://github.com/bootstrap-styled/redux/compare/v1.0.11...v1.0.12) (2018-11-23)
 
 
