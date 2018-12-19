@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/bootstrap-styled/redux/compare/v1.0.13...v1.0.14) (2018-12-19)
+
+
+### Bug Fixes
+
+* **package:** update [@bootstrap-styled](https://github.com/bootstrap-styled)/v4 to version 2.0.0 ([2de0f73](https://github.com/bootstrap-styled/redux/commit/2de0f73))
+
 ## [1.0.13](https://github.com/bootstrap-styled/redux/compare/v1.0.12...v1.0.13) (2018-12-16)
 
 
