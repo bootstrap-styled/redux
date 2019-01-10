@@ -43,10 +43,6 @@
         {
           "name": "ConnectedBootstrapProvider",
           "content": "src/immutable/ConnectedBootstrapProvider/index.md"
-        },
-        {
-          "name": "ConnectedBootstrapProvider",
-          "content": "src/immutable/ThemeToggle/index.md"
         }
       ]
     },
