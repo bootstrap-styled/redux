@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import BootstrapProvider from '@bootstrap-styled/provider/lib/BootstrapProvider';
 import { selectTheme } from '../selectors';
 
+/* eslint-disable-next-line react/prop-types */
 const ConnectedBootstrapProvider = ({ theme, ...rest }) => <BootstrapProvider theme={theme.toJS()} {...rest} />;
 
 /** We map the theme from redux */
