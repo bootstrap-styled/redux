@@ -4,6 +4,7 @@ import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import BootstrapProvider from '@bootstrap-styled/provider/lib/BootstrapProvider';
 import { selectTheme } from '../selectors';
+export { REDUX_BS_KEY } from '../constants';
 
 const ConnectedBootstrapProvider = (props) => <BootstrapProvider {...props} />;
 
