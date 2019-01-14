@@ -3,6 +3,7 @@ import { initialState } from '../reducer';
 import {
   selectBsRedux, selectTheme, selectThemes, selectValue, selectValues,
 } from '../selectors';
+import { REDUX_BS_KEY } from '../../constants';
 
 describe('selectBsRedux immutable', () => {
   let state;
@@ -11,13 +12,13 @@ describe('selectBsRedux immutable', () => {
   beforeEach(() => {
     bsReduxState = initialState;
     state = fromJS({
-      'bs.redux': bsReduxState,
+      [REDUX_BS_KEY]: bsReduxState,
     });
   });
 
   describe('selectBsRedux', () => {
     it('should select the @bootstrap-styled/redux state', () => {
-      expect(selectBsRedux(state)).toEqual(state.get('bs.redux'));
+      expect(selectBsRedux(state)).toEqual(state.get(REDUX_BS_KEY));
     });
 
     describe('selectTheme', () => {

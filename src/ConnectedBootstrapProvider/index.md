@@ -6,6 +6,7 @@ const { Provider } = require('react-redux');
 const { makeTheme, theme } = require('bootstrap-styled/lib');
 const { Form, Badge } = require('@bootstrap-styled/v4/lib');
 const { default: themeReducer } = require('@bootstrap-styled/redux/lib/reducer');
+const { REDUX_BS_KEY } = require('@bootstrap-styled/redux/lib/constants');
 
 // create themes to be stored
 const sampleTheme = makeTheme({
@@ -16,6 +17,7 @@ const sampleTheme = makeTheme({
   '$badge-info-bg': '#69DD8E',
   '$badge-warning-bg': '#701BDD',
 });
+
 const sampleThemeBis = makeTheme({
   ...sampleTheme,
   '_name': 'bootstrap-styled-bis', // not that we rename the theme to create a new one
@@ -30,21 +32,22 @@ const sampleThemeBis = makeTheme({
 });
 
 const reducers = combineReducers({
- 'bs.redux': themeReducer,
- // add more reducers to your app
+  [REDUX_BS_KEY]: themeReducer,
+  // add more reducers to your app
 });
 
 const store = createStore(reducers, {
   // 2nd parameter of create store is for store initial values
-  'bs.redux': {
-    theme, 
-    themes: { 
+  [REDUX_BS_KEY]: {
+    theme,
+    themes: {
       [theme._name]: theme,
       [sampleTheme._name]: sampleTheme,
       [sampleThemeBis._name]: sampleThemeBis,
-    },  
-  }  
+    },
+  }
 });
+
 <Provider store={store}>
   <ConnectedBootstrapProvider>
     <Form>

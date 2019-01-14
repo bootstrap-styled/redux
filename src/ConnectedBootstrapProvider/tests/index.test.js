@@ -6,12 +6,13 @@ import { theme } from 'bootstrap-styled';
 import Button from '@bootstrap-styled/v4/lib/Button';
 import ConnectedBootstrapProvider from '../index';
 import reducer from '../../reducer';
+import { REDUX_BS_KEY } from '../../constants';
 
 /* eslint-disable function-paren-newline */
 describe('<ConnectedBootstrapProvider />', () => {
   let store;
   beforeAll(() => {
-    store = createStore(combineReducers({ 'bs.redux': reducer }));
+    store = createStore(combineReducers({ [REDUX_BS_KEY]: reducer }));
   });
 
   it('should render the ConnectedBootstrapProvider', () => {

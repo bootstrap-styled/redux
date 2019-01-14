@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect';
+import { REDUX_BS_KEY } from '../constants';
 
-export const selectBsRedux = (state) => state.get('bs.redux');
+export const selectBsRedux = (state) => state.get(REDUX_BS_KEY);
 
 /**
  * themes

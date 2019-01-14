@@ -6,13 +6,14 @@ import { combineReducers } from 'redux-immutable';
 import theme from 'bootstrap-styled/lib/theme';
 import { changeTheme as changeThemeAction } from '../../../actions';
 import reducer from '../../reducer';
+import { REDUX_BS_KEY } from '../../../constants';
 import ThemeToggle, { mapDispatchToProps } from '..';
 
 /* eslint-disable function-paren-newline */
 describe('<ThemeToggle />', () => {
   let store;
   beforeAll(() => {
-    store = createStore(combineReducers({ 'bs.redux': reducer }));
+    store = createStore(combineReducers({ [REDUX_BS_KEY]: reducer }));
   });
 
   it('should render the default language messages', () => {

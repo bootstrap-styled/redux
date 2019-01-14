@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import theme, { makeTheme } from 'bootstrap-styled/lib/theme';
 import Provider from 'react-redux/lib/components/Provider';
 import PropTypes from 'prop-types';
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import {
+  createStore, applyMiddleware, compose, combineReducers,
+} from 'redux';
 import themeReducer from '../../src/reducer';
+import { REDUX_BS_KEY } from '../../src/constants';
 
 export default class Wrapper extends Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
@@ -17,12 +20,11 @@ export default class Wrapper extends Component { // eslint-disable-line react/pr
   /* eslint-disable no-underscore-dangle, function-paren-newline */
   componentWillMount() {
     const middleware = [];
-    const composeEnhancers =
-      typeof window === 'object' &&
-      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-          // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
-        }) : compose;
+    const composeEnhancers = typeof window === 'object'
+      && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+        // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
+      }) : compose;
 
     const enhancer = composeEnhancers(applyMiddleware(...middleware),
       // other store enhancers if any
@@ -36,9 +38,9 @@ export default class Wrapper extends Component { // eslint-disable-line react/pr
     });
 
     const store = createStore(combineReducers({
-      'bs.redux': themeReducer,
+      [REDUX_BS_KEY]: themeReducer,
     }), {
-      'bs.redux': {
+      [REDUX_BS_KEY]: {
         theme,
         themes: {
           [theme._name]: theme, // eslint-disable-line no-underscore-dangle
@@ -53,11 +55,12 @@ export default class Wrapper extends Component { // eslint-disable-line react/pr
   /* eslint-enable no-underscore-dangle, function-paren-newline */
 
   render() {
+    const { store } = this.state;
+    const { children } = this.props;
     return (
-      <Provider store={this.state.store}>
-        {this.props.children}
+      <Provider store={store}>
+        {children}
       </Provider>
     );
   }
 }
-

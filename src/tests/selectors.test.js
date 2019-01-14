@@ -3,6 +3,7 @@ import { initialState } from '../reducer';
 import {
   selectBsRedux, selectTheme, selectThemes, selectValue, selectValues,
 } from '../selectors';
+import { REDUX_BS_KEY } from '../constants';
 
 describe('selectBsRedux', () => {
   let state;
@@ -11,7 +12,7 @@ describe('selectBsRedux', () => {
   beforeEach(() => {
     bsReduxState = initialState;
     state = {
-      'bs.redux': bsReduxState,
+      [REDUX_BS_KEY]: bsReduxState,
     };
   });
 
