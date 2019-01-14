@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/bootstrap-styled/redux/compare/v1.0.15...v1.1.0) (2019-01-14)
+
+
+### Features
+
+* **constants:** added and exported constant REDUX_BS_KEY ([9293232](https://github.com/bootstrap-styled/redux/commit/9293232))
+
 ## [1.0.15](https://github.com/bootstrap-styled/redux/compare/v1.0.14...v1.0.15) (2019-01-11)
 
 
