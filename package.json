@@ -1,6 +1,6 @@
 {
   "name": "@bootstrap-styled/redux",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Bootstrap Styled redux store and component to store all your theme in one place",
   "main": "lib/index.js",
   "jsnext:main": "dist/@bootstrap-styled/redux.es.js",
