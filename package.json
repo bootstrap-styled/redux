@@ -215,7 +215,7 @@
   "dependencies": {
     "@bootstrap-styled/provider": "^1.4.2",
     "@bootstrap-styled/toggle": "^1.2.2",
-    "@bootstrap-styled/v4": "^2.0.16",
+    "@bootstrap-styled/v4": "^3.0.4",
     "prop-types": "^15.6.2",
     "reselect": "^4.0.0"
   },
