@@ -1,3 +1,24 @@
+## [1.1.1](https://github.com/bootstrap-styled/redux/compare/v1.1.0...v1.1.1) (2019-02-05)
+
+
+### Bug Fixes
+
+* **package:** update [@bootstrap-styled](https://github.com/bootstrap-styled)/v4 to version 3.0.4 ([a7c5e2d](https://github.com/bootstrap-styled/redux/commit/a7c5e2d))
+
+# [1.1.0](https://github.com/bootstrap-styled/redux/compare/v1.0.15...v1.1.0) (2019-01-14)
+
+
+### Features
+
+* **constants:** added and exported constant REDUX_BS_KEY ([9293232](https://github.com/bootstrap-styled/redux/commit/9293232))
+
+## [1.0.15](https://github.com/bootstrap-styled/redux/compare/v1.0.14...v1.0.15) (2019-01-11)
+
+
+### Bug Fixes
+
+* **documentation:** Keep only one example for the ConnectedBootstrapProvider ([94d34e2](https://github.com/bootstrap-styled/redux/commit/94d34e2))
+
 ## [1.0.14](https://github.com/bootstrap-styled/redux/compare/v1.0.13...v1.0.14) (2018-12-19)
 
 
