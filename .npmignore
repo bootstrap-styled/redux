@@ -23,3 +23,5 @@ reports/
 /styleguide
 lib/**/*.md
 src/**/*.md
+**/tests/*.test.js
+.ncurc.js
