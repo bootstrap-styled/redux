@@ -203,7 +203,7 @@
     "webpack": "^4.29.6"
   },
   "dependencies": {
-    "@bootstrap-styled/provider": "^1.4.2",
+    "@bootstrap-styled/provider": "^2.0.0",
     "@bootstrap-styled/toggle": "^1.2.3",
     "@bootstrap-styled/v4": "^3.0.6",
     "prop-types": "^15.7.2",
