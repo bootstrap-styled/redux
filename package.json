@@ -197,7 +197,7 @@
     "redux-immutable": "^4.0.0",
     "request": "^2.88.0",
     "rollup": "^1.4.1",
-    "semantic-release": "^15.13.3",
+    "semantic-release": "^16.0.0",
     "styled-components": "^4.1.3",
     "toctoc": "^0.3.2",
     "webpack": "^4.29.6"
