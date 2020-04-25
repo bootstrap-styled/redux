@@ -9,7 +9,7 @@
 [![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/redux)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.github.bootstrap-styled.redux&metric=coverage)](https://sonarcloud.io/dashboard?id=com.github.bootstrap-styled.redux) [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=com.github.bootstrap-styled.redux&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.github.bootstrap-styled.redux)
 [![gitter](https://badges.gitter.im/bootstrap-styled/bootstrap-styled.svg)](https://gitter.im/bootstrap-styled)
-[![Greenkeeper badge](https://badges.greenkeeper.io/bootstrap-styled/redux.svg)](https://greenkeeper.io/)
+
 
 ConnectedBootstrapProvider ReactJS component made for bootstrap-styled and redux
 
